@@ -9,7 +9,7 @@ import LinksList from "~/elements/LinksList.vue";
       <nav>
         <LinksList :list="headerLinks.left"></LinksList>
 
-        <NuxtImg
+        <img
           src="logo.svg"
           alt="Ariadna Premium - логотип"
           class="logo"

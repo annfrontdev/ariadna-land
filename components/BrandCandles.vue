@@ -31,7 +31,7 @@ const photos = [
           :key="photo.id"
           class="brand-candles__photo"
         >
-          <NuxtImg :src="photo.img" :alt="photo.alt" />
+          <img :src="photo.img" :alt="photo.alt" />
         </div>
       </div>
     </div>

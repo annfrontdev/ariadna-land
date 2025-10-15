@@ -7,7 +7,7 @@ defineProps({
 <template>
   <div class="photos-pair">
     <div class="photos-pair__content">
-      <NuxtImg
+      <img
         v-for="photo in photos"
         :key="photo.id"
         :src="photo.img"
@@ -15,7 +15,7 @@ defineProps({
       />
     </div>
 
-    <NuxtImg
+    <img
       v-if="!hideEllipse"
       src="./content/ellipse.svg"
       class="photos-pair__ellipse"

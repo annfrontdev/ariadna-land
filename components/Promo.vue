@@ -6,12 +6,12 @@ import MainTitle from "~/elements/MainTitle.vue";
   <div class="promo wrapper">
     <div class="promo__grid">
       <MainTitle class="promo__title">Ariadna premium</MainTitle>
-      <NuxtImg
+      <img
         src="./content/promo-1.png"
         alt="промо свеча 1"
         class="promo__photo"
       />
-      <NuxtImg
+      <img
         src="./content/promo-2.png"
         alt="промо свеча 2"
         class="promo__photo"
