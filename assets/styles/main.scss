@@ -1,0 +1,26 @@
+body {
+  background-color: $background;
+  color: $text;
+  font-family: $font-primary;
+  font-weight: 300;
+}
+
+html,
+body,
+#__nuxt,
+.app {
+  height: 100%;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 $horizontal-padding;
+  overflow: hidden;
+}
+
+* {
+  outline: 1px solid red;
+}
