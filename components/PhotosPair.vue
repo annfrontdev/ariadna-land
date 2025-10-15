@@ -26,12 +26,18 @@ defineProps({
 <style lang="scss">
 .photos-pair {
   position: relative;
+  width: 100%;
 
   &__content {
+    flex-grow: 1;
+    width: 100%;
     display: grid;
-    grid-template-columns: 371px 171px;
-    grid-template-rows: 466px;
+    grid-template-columns: 50% 20%;
     column-gap: 29px;
+    justify-content: center;
+
+    z-index: 1;
+
 
     img {
       width: 100%;
@@ -39,13 +45,14 @@ defineProps({
   }
 
   &__ellipse {
-    position: absolute;
-    top: 47%;
-    transform: translateY(-50%) rotate(-30deg);
-    left: -24%;
-    width: 157%;
-    height: auto;
-    z-index: -1;
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%) rotate(-35deg);
+  transform-origin: center;
+  left: -5%;
+  width: 110%;
+  height: auto;
+  z-index: -1;
   }
 }
 </style>
