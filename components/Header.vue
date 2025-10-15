@@ -10,7 +10,7 @@ import LinksList from "~/elements/LinksList.vue";
         <LinksList :list="headerLinks.left"></LinksList>
 
         <img
-          src="logo.svg"
+          src="/logo.svg"
           alt="Ariadna Premium - логотип"
           class="logo"
           width="110"

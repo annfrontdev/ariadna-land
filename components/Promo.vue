@@ -7,12 +7,12 @@ import MainTitle from "~/elements/MainTitle.vue";
     <div class="promo__grid">
       <MainTitle class="promo__title">Ariadna premium</MainTitle>
       <img
-        src="./content/promo-1.png"
+        src="/content/promo-1.png"
         alt="промо свеча 1"
         class="promo__photo"
       />
       <img
-        src="./content/promo-2.png"
+        src="/content/promo-2.png"
         alt="промо свеча 2"
         class="promo__photo"
       />
