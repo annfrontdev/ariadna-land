@@ -5,12 +5,12 @@ import PhotosPair from "./PhotosPair.vue";
 const photos = [
   {
     id: 1,
-    img: "./content/diffusors-1.png",
+    img: "content/diffusors-1.png",
     alt: "свеча 1",
   },
   {
     id: 2,
-    img: "./content/diffusors-2.png",
+    img: "content/diffusors-2.png",
     alt: "свеча 2",
   },
 ];
@@ -63,7 +63,7 @@ const photos = [
   &__content {
     width: 100%;
     display: grid;
-    grid-template-columns: 490px max-content;
+    grid-template-columns: 490px 1fr;
     gap: 117px;
   }
 }

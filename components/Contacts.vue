@@ -2,9 +2,9 @@
 import LinksList from "~/elements/LinksList.vue";
 import SectionTitle from "~/elements/SectionTitle.vue";
 const contacts = [
-  { id: 1, path: "", img: "./content/telegram.png" },
-  { id: 2, path: "", img: "./content/whatsapp.png" },
-  { id: 3, path: "", img: "./content/vk.png" },
+  { id: 1, path: "", img: "content/telegram.png" },
+  { id: 2, path: "", img: "content/whatsapp.png" },
+  { id: 3, path: "", img: "content/vk.png" },
 ];
 </script>
 

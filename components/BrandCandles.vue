@@ -3,17 +3,17 @@ import SectionTitle from "~/elements/SectionTitle.vue";
 const photos = [
   {
     id: 1,
-    img: "./content/brand-candles-1.png",
+    img: "content/brand-candles-1.png",
     alt: "брендированная свеча 1",
   },
   {
     id: 2,
-    img: "./content/brand-candles-2.png",
+    img: "content/brand-candles-2.png",
     alt: "брендированная свеча 2",
   },
   {
     id: 3,
-    img: "./content/brand-candles-3.png",
+    img: "content/brand-candles-3.png",
     alt: "брендированная свеча 3",
   },
 ];
