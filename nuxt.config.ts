@@ -2,10 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-
   modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxt/image", "@nuxt/content"],
-
+  ssr: false,
   app: {
+    baseURL: "/ariadna-land/",
     head: {
       link: [
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -53,8 +53,8 @@ export default defineNuxtConfig({
   icon: {
     customCollections: [
       {
-        prefix: 'my-icon',
-        dir: './assets/icons'
+        prefix: "my-icon",
+        dir: "./assets/icons",
       },
     ],
   },
