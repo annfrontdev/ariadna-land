@@ -50,7 +50,6 @@ const photos = [
 .diffusors {
   display: flex;
   justify-content: center;
-  margin: 135px 0;
 
   h2 {
     margin-top: 35px;
@@ -61,15 +60,12 @@ const photos = [
     margin: 27px 0;
   }
 
-  &.wrapper {
-    padding-right: 0;
-  }
-
   &__content {
     width: 100%;
     display: grid;
     grid-template-columns: 490px 1fr;
     gap: 117px;
+    margin: 135px 0;
   }
 }
 </style>

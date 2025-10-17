@@ -9,17 +9,18 @@ const contacts = [
 </script>
 
 <template>
-  <div id="contacts" class="contacts">
-    <SectionTitle>написать нам</SectionTitle>
-    <p>задать вопрос или забрать бесплатный чек-лист в соц.сетях</p>
+  <div id="contacts" class="contacts wrapper">
+    <div class="contacts__content">
+      <SectionTitle>написать нам</SectionTitle>
+      <p>задать вопрос или забрать бесплатный чек-лист в соц.сетях</p>
 
-    <LinksList :list="contacts" class="contacts__list"></LinksList>
+      <LinksList :list="contacts" class="contacts__list"></LinksList>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
 .contacts {
-  margin: $vertical-margin 0;
   padding: 0 $horizontal-padding;
   display: grid;
   text-align: center;
@@ -41,6 +42,10 @@ const contacts = [
       width: 120px;
       height: 120px;
     }
+  }
+
+  &__content {
+    margin: $vertical-margin 0;
   }
 }
 </style>

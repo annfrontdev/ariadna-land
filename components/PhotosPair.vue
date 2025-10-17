@@ -42,8 +42,8 @@ defineProps({
     top: 55%;
     transform: translateY(-50%) rotate(-35deg);
     transform-origin: center;
-    left: -5%;
-    width: 110%;
+    left: -15%;
+    width: 135%;
     height: auto;
     z-index: -1;
   }

@@ -22,7 +22,7 @@ const photos = [
 
 <template>
   <div id="form" class="form-candles wrapper">
-    <div>
+    <div class="form-candles__content">
       <SectionTitle>формовые свечи</SectionTitle>
 
       <PhotosGrid :photos="photos">
@@ -44,6 +44,8 @@ const photos = [
 
 <style lang="scss">
 .form-candles {
-  margin: $vertical-margin 0;
+  &__content {
+    margin: $vertical-margin 0;
+  }
 }
 </style>
