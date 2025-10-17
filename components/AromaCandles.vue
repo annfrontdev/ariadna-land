@@ -29,7 +29,7 @@ const formTypes = [
 </script>
 
 <template>
-  <div class="aroma-candles">
+  <div id="candles" class="aroma-candles">
     <div class="wrapper">
       <SectionTitle>аромасвечи с медитацией</SectionTitle>
 

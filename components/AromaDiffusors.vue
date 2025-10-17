@@ -17,7 +17,7 @@ const photos = [
 </script>
 
 <template>
-  <div class="diffusors wrapper">
+  <div id="diffusers" class="diffusors wrapper">
     <div class="diffusors__content">
       <div>
         <SectionTitle>аромадиффузоры</SectionTitle>
@@ -27,7 +27,8 @@ const photos = [
             Диффузор - это один из способов его спроектировать.
           </p>
           <p>
-            Вдохните свежести в рабочее пространство или умиротворения в&nbsp;спальню.
+            Вдохните свежести в рабочее пространство или умиротворения
+            в&nbsp;спальню.
             <br />
             Аромадиффузор стал неотъемлемой частью образа интерьера.
             <br />
@@ -58,6 +59,10 @@ const photos = [
   p {
     line-height: 22px;
     margin: 27px 0;
+  }
+
+  &.wrapper {
+    padding-right: 0;
   }
 
   &__content {

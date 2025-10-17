@@ -28,9 +28,9 @@ import MainTitle from "~/elements/MainTitle.vue";
 .promo {
   display: flex;
   justify-content: center;
-  margin: $vertical-margin 0;
 
   &__grid {
+    margin: $vertical-margin 0;
     display: grid;
     grid-template-columns: 395px 395px;
     grid-template-rows: max-content max-content max-content;

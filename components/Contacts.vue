@@ -9,7 +9,7 @@ const contacts = [
 </script>
 
 <template>
-  <div class="contacts">
+  <div id="contacts" class="contacts">
     <SectionTitle>написать нам</SectionTitle>
     <p>задать вопрос или забрать бесплатный чек-лист в соц.сетях</p>
 

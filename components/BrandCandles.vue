@@ -20,18 +20,18 @@ const photos = [
 </script>
 
 <template>
-  <div class="brand-candles">
+  <div id="brand" class="brand-candles">
     <div class="wrapper">
       <SectionTitle>брендированные свечи</SectionTitle>
       <p>мерч, которого точно нет у ваших конкурентов</p>
 
       <div class="brand-candles__photos">
         <div
-          v-for="photo in photos"
-          :key="photo.id"
+          v-for="p in photos"
+          :key="p.id"
           class="brand-candles__photo"
         >
-          <img :src="photo.img" :alt="photo.alt" />
+          <img :src="p.img" :alt="p.alt" />
         </div>
       </div>
     </div>
@@ -65,11 +65,11 @@ const photos = [
       object-fit: cover;
     }
 
-    &:nth-child(1) {
+    &:first-child {
       border-top-left-radius: 70px;
     }
 
-    &:nth-child(1) {
+    &:last-child {
       border-bottom-right-radius: 70px;
     }
   }

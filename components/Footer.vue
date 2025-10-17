@@ -1,15 +1,21 @@
 <script setup>
-import { products } from "~/content/links";
 import LinksList from "~/elements/LinksList.vue";
+
+const list = [
+  { id: 1, title: "Аромасвечи с медитацией", path: "#candles" },
+  { id: 2, title: "Диффузоры", path: "#diffusers" },
+  { id: 4, title: "Формовые свечи", path: "#form" },
+  { id: 3, title: "Брендирование свечей", path: "#brand" },
+];
 </script>
 
 <template>
   <footer class="footer">
     <div class="wrapper">
       <div class="footer__lists">
-        <NuxtLink to="/about">О нас</NuxtLink>
-        <LinksList :list="products"></LinksList>
-        <NuxtLink to="/about">Бесплатный чек-лист</NuxtLink>
+        <a href="#about">О нас</a>
+        <LinksList :list="list"></LinksList>
+        <a href="#about">Бесплатный чек-лист</a>
       </div>
       <p class="copyright">Ariadna premium 2025</p>
     </div>

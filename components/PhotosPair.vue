@@ -22,13 +22,11 @@ defineProps({
 <style lang="scss">
 .photos-pair {
   position: relative;
-  width: 100%;
 
   &__content {
-    flex-grow: 1;
-    width: 100%;
     display: grid;
-    grid-template-columns: 50% 20%;
+    grid-template-columns: 371px 171px;
+
     column-gap: 29px;
     justify-content: center;
 

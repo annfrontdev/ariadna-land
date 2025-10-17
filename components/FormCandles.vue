@@ -21,7 +21,7 @@ const photos = [
 </script>
 
 <template>
-  <div class="form-candles wrapper">
+  <div id="form" class="form-candles wrapper">
     <div>
       <SectionTitle>формовые свечи</SectionTitle>
 
