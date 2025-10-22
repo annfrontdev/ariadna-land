@@ -50,26 +50,26 @@ const photos = [
     <div class="about-us__content wrapper">
       <div>
         <SectionTitle>о нас</SectionTitle>
-        <div>
+        <div class="about-us__text">
           <p>
             Мы верим, что детали создают атмосферу, поэтому каждая наше изеделие
-            – это уникальное произведение искусства, способное преобразить любой
-            интерьер. Ariadna premium – это:
+            – это уникальное произведение искусства, <br />
+            способное преобразить любой интерьер. Ariadna premium – это:
           </p>
 
           <CommonList :list="benefits" />
         </div>
       </div>
-      <PhotosPair :photos="photos" :hideEllipse="true"/>
+      <PhotosPair :photos="photos" :hideEllipse="true" />
     </div>
   </div>
 </template>
 
 <style lang="scss">
 .about-us {
+  @include vertical-margin;
   display: flex;
   justify-content: center;
-  margin: 157px 0;
 
   h2 {
     margin-top: 36px;
@@ -80,11 +80,16 @@ const photos = [
     line-height: 24px;
   }
 
+  &__text {
+    padding-bottom: 20px;
+  }
+
   &__content {
+    @include grid-content;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 73px;
+  }
+
+  @media (max-width: $tablet) {
   }
 }
 </style>

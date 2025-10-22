@@ -12,5 +12,9 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 40px;
+
+  @media(max-width: $tablet) {
+    font-size: 31px;
+  }
 }
 </style>

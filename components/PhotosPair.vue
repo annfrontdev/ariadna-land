@@ -26,8 +26,7 @@ defineProps({
   &__content {
     display: grid;
     grid-template-columns: 371px 171px;
-
-    column-gap: 29px;
+    column-gap: 5%;
     justify-content: center;
 
     z-index: 1;
@@ -46,6 +45,13 @@ defineProps({
     width: 135%;
     height: auto;
     z-index: -1;
+  }
+
+  @media (max-width: 1439px) {
+    &__content {
+      grid-template-columns: 55% 40%;
+      justify-content: flex-start;
+    }
   }
 }
 </style>

@@ -17,30 +17,32 @@ const photos = [
 </script>
 
 <template>
-  <div id="diffusers" class="diffusors wrapper">
-    <div class="diffusors__content">
-      <div>
-        <SectionTitle>аромадиффузоры</SectionTitle>
+  <div id="diffusers" class="diffusors">
+    <div class="wrapper">
+      <div class="diffusors__content">
         <div>
-          <p>
-            Аромат - невидимый образ, который создается в каждом помещении.
-            Диффузор - это один из способов его спроектировать.
-          </p>
-          <p>
-            Вдохните свежести в рабочее пространство или умиротворения
-            в&nbsp;спальню.
-            <br />
-            Аромадиффузор стал неотъемлемой частью образа интерьера.
-            <br />
-            Не отказывайте себе в удовольствии наслаждаться любимыми ароматами
-            не только через духи.
-          </p>
-          <p>Сделайте дом или рабочее место аромакайфовым!</p>
+          <SectionTitle>аромадиффузоры</SectionTitle>
+          <div>
+            <p>
+              Аромат - невидимый образ, который создается в каждом помещении.
+              Диффузор - это один из способов его спроектировать.
+            </p>
+            <p>
+              Вдохните свежести в рабочее пространство или умиротворения
+              в&nbsp;спальню.
+              <br />
+              Аромадиффузор стал неотъемлемой частью образа интерьера.
+              <br />
+              Не отказывайте себе в удовольствии наслаждаться любимыми ароматами
+              не только через духи.
+            </p>
+            <p>Сделайте дом или рабочее место аромакайфовым!</p>
+          </div>
         </div>
-      </div>
 
-      <div class="diffusors__photos">
-        <PhotosPair :photos="photos" />
+        <div class="diffusors__photos">
+          <PhotosPair :photos="photos" />
+        </div>
       </div>
     </div>
   </div>
@@ -48,8 +50,12 @@ const photos = [
 
 <style lang="scss">
 .diffusors {
-  display: flex;
-  justify-content: center;
+  @include vertical-margin;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
 
   h2 {
     margin-top: 35px;
@@ -61,11 +67,14 @@ const photos = [
   }
 
   &__content {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 490px 1fr;
-    gap: 117px;
-    margin: 135px 0;
+    @include grid-content;
+    justify-content: center;
+  }
+
+  @media (max-width: $tablet) {
+    h2 {
+      margin-top: 0;
+    }
   }
 }
 </style>

@@ -21,13 +21,14 @@ const contacts = [
 
 <style lang="scss">
 .contacts {
-  padding: 0 $horizontal-padding;
+  @include horizontal-padding;
   display: grid;
   text-align: center;
 
   p {
     font-weight: 300;
     font-size: 32px;
+    line-height: 40px;
     text-align: center;
     margin: 0;
     margin-bottom: 28px;
@@ -45,7 +46,23 @@ const contacts = [
   }
 
   &__content {
-    margin: $vertical-margin 0;
+    @include vertical-margin;
+  }
+
+  @media (max-width: $tablet) {
+    p {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    &__list {
+      gap: 16px;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
   }
 }
 </style>

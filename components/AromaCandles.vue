@@ -6,17 +6,17 @@ import CommonList from "~/elements/CommonList.vue";
 const photos = [
   {
     id: 1,
-    img: "content/candles-1.png",
+    img: "content/candles-1.jpg",
     alt: "аромасвеча 1",
   },
   {
     id: 2,
-    img: "content/candles-2.png",
+    img: "content/candles-2.jpg",
     alt: "аромасвеча 2",
   },
   {
     id: 3,
-    img: "content/candles-3.png",
+    img: "content/candles-3.jpg",
     alt: "аромасвеча 3",
   },
 ];
@@ -32,7 +32,6 @@ const formTypes = [
   <div id="candles" class="aroma-candles">
     <div class="wrapper">
       <SectionTitle>аромасвечи с медитацией</SectionTitle>
-
       <PhotosGrid :photos="photos" class="aroma-candles__grid">
         <p>
           Наше основное отличие от других - это бонус, который вы получаете с
@@ -65,7 +64,8 @@ const formTypes = [
 
 <style lang="scss">
 .aroma-candles {
-  margin: $vertical-margin 0;
+  @include vertical-margin;
+  // width: 100%;
 
   &__grid {
     p {

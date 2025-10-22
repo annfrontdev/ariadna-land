@@ -1,36 +1,62 @@
 <script setup>
-import MainTitle from "~/elements/MainTitle.vue";
+const titleRef = ref();
+const titleWrapperRef = ref();
+const stretchFactor = ref(1);
+
+function updateStretch() {
+  const containerWidth = titleWrapperRef.value.offsetWidth;
+  const textWidth = titleRef.value.offsetWidth;
+  stretchFactor.value = containerWidth / textWidth - 0.2;
+}
+
+onMounted(() => {
+  updateStretch();
+  window.addEventListener("resize", updateStretch);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", updateStretch);
+});
 </script>
 
 <template>
-  <div class="promo wrapper">
-    <div class="promo__grid">
-      <MainTitle class="promo__title">Ariadna premium</MainTitle>
-      <img
-        src="/content/promo-1.png"
-        alt="промо свеча 1"
-        class="promo__photo"
-      />
-      <img
-        src="/content/promo-2.png"
-        alt="промо свеча 2"
-        class="promo__photo"
-      />
-      <NuxtLink to="/contacts" class="promo__button">
-        <span>НАПИСАТЬ НАМ</span>
-        <Icon name="my-icon:arrow" size="8" />
-      </NuxtLink>
+  <div class="promo">
+    <div class="wrapper">
+      <div class="promo__grid">
+        <div class="promo__title" ref="titleWrapperRef">
+          <span ref="titleRef" :style="{ transform: `scale(${stretchFactor})` }"
+            >Ariadna premium</span
+          >
+        </div>
+        <img
+          src="/content/promo-1.png"
+          alt="промо свеча 1"
+          class="promo__photo"
+        />
+        <img
+          src="/content/promo-2.png"
+          alt="промо свеча 2"
+          class="promo__photo"
+        />
+        <NuxtLink to="/contacts" class="promo__button">
+          <span>НАПИСАТЬ НАМ</span>
+          <Icon name="my-icon:arrow" size="8" />
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss">
 .promo {
-  display: flex;
-  justify-content: center;
+  @include vertical-margin;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
 
   &__grid {
-    margin: $vertical-margin 0;
     display: grid;
     grid-template-columns: 395px 395px;
     grid-template-rows: max-content max-content max-content;
@@ -54,6 +80,22 @@ import MainTitle from "~/elements/MainTitle.vue";
   &__title {
     grid-column: 1/2;
     grid-row: 1/2;
+    width: 100%;
+    // border: 1px solid $text;
+    padding: 10px 10px 14px 10px;
+    box-sizing: border-box;
+
+    span {
+      font-family: $font-fourth;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      margin: 0;
+      display: inline-block;
+      transform-origin: left;
+    }
   }
 
   img {
@@ -73,6 +115,13 @@ import MainTitle from "~/elements/MainTitle.vue";
   a {
     grid-column: 2/3;
     grid-row: 3/-1;
+  }
+
+  @media (max-width: $tablet) {
+    &__grid {
+      grid-template-columns: 40vw 40vw;
+      gap: 8px;
+    }
   }
 }
 </style>

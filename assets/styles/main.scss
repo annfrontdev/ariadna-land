@@ -3,6 +3,8 @@ body {
   color: $text;
   font-family: $font-primary;
   font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 html {
@@ -17,10 +19,10 @@ body,
 }
 
 .wrapper {
+  @include horizontal-padding;
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 $horizontal-padding;
   overflow-x: clip;
 }

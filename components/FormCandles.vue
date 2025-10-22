@@ -21,31 +21,29 @@ const photos = [
 </script>
 
 <template>
-  <div id="form" class="form-candles wrapper">
-    <div class="form-candles__content">
-      <SectionTitle>формовые свечи</SectionTitle>
-
-      <PhotosGrid :photos="photos">
-        <p>
-          Малыш Будда, Лотос и Столбик из пузырей - линейка формовых свечей.
-        </p>
-        <p>
-          Они бывают ароматные и нейтральные - с запахом натурального соевого
-          воска.
-        </p>
-        <p>
-          Своей филигранностью они покоряют сердца и вдохновляют любоваться имиё
-          и жалеть зажигать!
-        </p>
-      </PhotosGrid>
+  <div id="form" class="form-candles">
+    <div class="wrapper">
+        <SectionTitle>формовые свечи</SectionTitle>
+        <PhotosGrid :photos="photos">
+          <p>
+            Малыш Будда, Лотос и Столбик из пузырей - линейка формовых свечей.
+          </p>
+          <p>
+            Они бывают ароматные и нейтральные - с запахом натурального соевого
+            воска.
+          </p>
+          <p>
+            Своей филигранностью они покоряют сердца и вдохновляют любоваться
+            ими и жалеть зажигать!
+          </p>
+        </PhotosGrid>
     </div>
   </div>
 </template>
 
 <style lang="scss">
 .form-candles {
-  &__content {
-    margin: $vertical-margin 0;
-  }
+  @include vertical-margin;
+  padding-top: 120px;
 }
 </style>

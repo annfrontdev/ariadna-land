@@ -26,11 +26,7 @@ const photos = [
       <p>мерч, которого точно нет у ваших конкурентов</p>
 
       <div class="brand-candles__photos">
-        <div
-          v-for="p in photos"
-          :key="p.id"
-          class="brand-candles__photo"
-        >
+        <div v-for="p in photos" :key="p.id" class="brand-candles__photo">
           <img :src="p.img" :alt="p.alt" />
         </div>
       </div>
@@ -40,6 +36,7 @@ const photos = [
 
 <style lang="scss">
 .brand-candles {
+  @include vertical-margin;
   display: flex;
   justify-content: center;
 
@@ -47,13 +44,14 @@ const photos = [
     margin-bottom: 40px;
     font-weight: 300;
     font-size: 32px;
+    line-height: 40px;
   }
 
   &__photos {
     height: 428px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 47px;
+    gap: clamp(8px, 2vw, 47px);
   }
 
   &__photo {
@@ -71,6 +69,19 @@ const photos = [
 
     &:last-child {
       border-bottom-right-radius: 70px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    p {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    &__photos {
+      height: auto;
+      width: 100vw;
+      aspect-ratio: 1 / 1;
     }
   }
 }

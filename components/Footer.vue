@@ -49,5 +49,13 @@ const list = [
     justify-content: space-between;
     margin-bottom: 75px;
   }
+
+  @media (max-width: $tablet) {
+    &__lists {
+      flex-direction: column;
+      align-content: space-between;
+      gap: 40px;
+    }
+  }
 }
 </style>
