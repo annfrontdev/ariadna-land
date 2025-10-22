@@ -80,7 +80,7 @@ const photos = [
 
     &__photos {
       height: auto;
-      width: 100vw;
+      width: 100%;
       aspect-ratio: 1 / 1;
     }
   }
