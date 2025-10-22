@@ -9,6 +9,7 @@
   font-family: $font-secondary;
   font-weight: 400;
   font-size: 51px;
+  line-height: 140%;
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 40px;

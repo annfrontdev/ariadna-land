@@ -119,8 +119,8 @@ onUnmounted(() => {
 
   @media (max-width: $tablet) {
     &__grid {
-      grid-template-columns: 40vw 40vw;
-      gap: 8px;
+      grid-template-columns: 1fr 1fr;
+      gap: 2%;
     }
   }
 }
