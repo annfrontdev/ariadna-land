@@ -42,7 +42,7 @@ onUnmounted(() => {
 
         <NuxtLink to="/contacts" class="promo__button">
           <span>НАПИСАТЬ НАМ</span>
-          <Icon name="my-icon:arrow" size="8" />
+          <Icon name="my-icon:arrow" />
         </NuxtLink>
       </div>
     </div>
@@ -120,10 +120,38 @@ onUnmounted(() => {
     grid-row: 3 / -1;
   }
 
+  &__button {
+    span:last-child {
+      width: 2rem;
+    }
+  }
+
   @media (max-width: $tablet) {
     &__grid {
       grid-template-columns: 1fr 1fr;
-      gap: 2%;
+      gap: 8px;
+    }
+
+    &__button {
+      font-size: 12px;
+      span:last-child {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &__title {
+      padding: 2px;
+      padding-left: 2px;
+    }
+    &__button {
+      padding: 4px 8px;
+      font-size: 10px;
+
+      span:last-child {
+        display: none;
+      }
     }
   }
 }

@@ -80,7 +80,7 @@ defineProps({
 
   @media (max-width: $tablet) {
     &__photos {
-      width: 100vw;
+      width: 100%;
       aspect-ratio: 1 / 1;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);

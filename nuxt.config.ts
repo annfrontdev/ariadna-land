@@ -7,6 +7,8 @@ export default defineNuxtConfig({
   app: {
     baseURL: "/ariadna-land/",
     head: {
+      charset: "utf-16",
+      viewport: "width=device-width, initial-scale=1, maximum-scale=1",
       link: [
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
@@ -16,7 +18,7 @@ export default defineNuxtConfig({
         },
         {
           rel: "stylesheet",
-          href:`https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400&family=Jost:wght@300&family=Marcellus+SC:wght@400&family=Montserrat:wght@400&display=swap`,
+          href: `https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400&family=Jost:wght@300&family=Marcellus+SC:wght@400&family=Montserrat:wght@400&display=swap`,
         },
       ],
     },
