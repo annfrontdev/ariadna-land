@@ -66,6 +66,7 @@ onUnmounted(() => {
     grid-template-columns: 395px 395px;
     grid-template-rows: max-content max-content max-content;
     gap: 2%;
+    justify-content: center;
   }
 
   &__button {
