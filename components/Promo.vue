@@ -24,20 +24,22 @@ onUnmounted(() => {
     <div class="wrapper">
       <div class="promo__grid">
         <div class="promo__title" ref="titleWrapperRef">
-          <span ref="titleRef" :style="{ transform: `scale(${stretchFactor})` }"
-            >Ariadna premium</span
+          <span
+            ref="titleRef"
+            :style="{ transform: `scale(${stretchFactor})` }"
+          >
+            Ariadna premium</span
           >
         </div>
-        <img
-          src="/content/promo-1.png"
-          alt="промо свеча 1"
-          class="promo__photo"
-        />
-        <img
-          src="/content/promo-2.png"
-          alt="промо свеча 2"
-          class="promo__photo"
-        />
+
+        <div class="promo__photo">
+          <img src="/content/promo-2.jpg" alt="промо свеча 2" />
+        </div>
+
+        <div class="promo__photo">
+          <img src="/content/promo-1.jpg" alt="промо свеча 1" />
+        </div>
+
         <NuxtLink to="/contacts" class="promo__button">
           <span>НАПИСАТЬ НАМ</span>
           <Icon name="my-icon:arrow" size="8" />
@@ -50,17 +52,20 @@ onUnmounted(() => {
 <style lang="scss">
 .promo {
   @include vertical-margin;
+  display: flex;
+  justify-content: center;
 
-  .wrapper {
-    display: flex;
-    justify-content: center;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__grid {
     display: grid;
     grid-template-columns: 395px 395px;
     grid-template-rows: max-content max-content max-content;
-    column-gap: 30px;
+    gap: 2%;
   }
 
   &__button {
@@ -81,13 +86,11 @@ onUnmounted(() => {
     grid-column: 1/2;
     grid-row: 1/2;
     width: 100%;
-    // border: 1px solid $text;
     padding: 10px 10px 14px 10px;
     box-sizing: border-box;
 
     span {
-      font-family: $font-fourth;
-      font-weight: 400;
+      @include font-fourth;
       font-size: 14px;
       line-height: 20px;
       text-transform: uppercase;
@@ -98,23 +101,23 @@ onUnmounted(() => {
     }
   }
 
-  img {
-    width: 100%;
-  }
+  &__photo {
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 2 / -1;
+    border-bottom-left-radius: clamp(80px, 10vw, 140px);
 
-  &__photo:nth-of-type(1) {
-    grid-column: 1/2;
-    grid-row: 2/-1;
-  }
-
-  &__photo:nth-of-type(2) {
-    grid-column: 2/3;
-    grid-row: 1/3;
+    &:nth-of-type(2) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      border-radius: 0;
+      border-top-right-radius: clamp(80px, 10vw, 140px);
+    }
   }
 
   a {
-    grid-column: 2/3;
-    grid-row: 3/-1;
+    grid-column: 2 / 3;
+    grid-row: 3 / -1;
   }
 
   @media (max-width: $tablet) {

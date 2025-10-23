@@ -48,7 +48,7 @@ defineProps({
   &__photo {
     overflow: hidden;
     background-color: rgba($text, 0.1);
-
+    
     img {
       object-fit: cover;
       height: 100%;
@@ -80,7 +80,7 @@ defineProps({
 
   @media (max-width: $tablet) {
     &__photos {
-      width: 100%;
+      width: 100vw;
       aspect-ratio: 1 / 1;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);

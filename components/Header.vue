@@ -104,11 +104,10 @@ onUnmounted(() => {
     padding: 50px 0 40px 0;
 
     a {
+      @include font-tertiary;
       color: inherit;
       text-decoration: none;
-      font-weight: 400;
       font-size: 24px;
-      font-family: $font-tertiary;
     }
 
     &::after {
@@ -186,7 +185,7 @@ onUnmounted(() => {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
+      width: 100vw;
       height: 100vh;
       z-index: 100;
       box-sizing: border-box;

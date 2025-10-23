@@ -1,8 +1,7 @@
 body {
+  @include font-primary;
   background-color: $background;
   color: $text;
-  font-family: $font-primary;
-  font-weight: 300;
   font-size: 18px;
   line-height: 22px;
 }

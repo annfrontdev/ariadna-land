@@ -9,31 +9,14 @@ export default defineNuxtConfig({
     head: {
       link: [
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        { rel: "preconnect", href: "https://fonts.gstatic.com" },
         {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap",
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossorigin: "",
         },
-
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        { rel: "preconnect", href: "https://fonts.gstatic.com" },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400&display=swap",
-        },
-
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        { rel: "preconnect", href: "https://fonts.gstatic.com" },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap",
-        },
-
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        { rel: "preconnect", href: "https://fonts.gstatic.com" },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Marcellus+SC:wght@400&display=swap",
+          href:`https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400&family=Jost:wght@300&family=Marcellus+SC:wght@400&family=Montserrat:wght@400&display=swap`,
         },
       ],
     },
