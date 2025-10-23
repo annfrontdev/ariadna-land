@@ -1,6 +1,18 @@
-# Nuxt Minimal Starter
+# Ariadna Premium landing
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Hello!
+
+This project is simple landing page for the small shop Ariadna Premium.
+
+
+It use Vue 3, Nuxt 3, SCSS.
+
+You can open it here [link](https://annfrontdev.github.io/ariadna-land/).
+
+Welcome <3
+
+## Page preview
+<img width="1356" height="906" alt="ariadna-promo" src="https://github.com/user-attachments/assets/58c1e8e7-81d9-40cf-996f-bb66b3ad890a" />
 
 ## Setup
 
@@ -37,39 +49,3 @@ yarn dev
 # bun
 bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
