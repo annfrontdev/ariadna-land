@@ -90,6 +90,9 @@ const photos = [
   }
 
   @media (max-width: $tablet) {
+    h2 {
+      margin-top: 0;
+    }
   }
 }
 </style>
