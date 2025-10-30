@@ -48,7 +48,7 @@ defineProps({
   &__photo {
     overflow: hidden;
     background-color: rgba($text, 0.1);
-    
+
     img {
       object-fit: cover;
       height: 100%;
@@ -58,7 +58,7 @@ defineProps({
     &:first-child {
       grid-column: 1 / 2;
       grid-row: 1 / -1;
-      border-top-left-radius: clamp(100px, 120px, 140px);
+      border-top-left-radius: 160px;
     }
 
     &:nth-child(2) {
@@ -69,7 +69,7 @@ defineProps({
     &:nth-child(3) {
       grid-column: 3 / 4;
       grid-row: 1 / 2;
-      border-top-right-radius: clamp(100px, 120px, 140px);
+      border-top-right-radius: 120px;
     }
   }
 
@@ -89,13 +89,14 @@ defineProps({
     &__photo {
       &:first-child {
         grid-row: 1 / 3;
+        border-top-left-radius: 80px;
       }
 
       &:nth-child(3) {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
         border-radius: 0;
-        border-bottom-right-radius: clamp(100px, 10vw, 140px);
+        border-bottom-right-radius: 60px;
       }
     }
 

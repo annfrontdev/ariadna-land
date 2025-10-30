@@ -17,9 +17,5 @@
   @media (max-width: $tablet) {
     font-size: 31px;
   }
-
-  @media (max-width: $mobile) {
-    font-size: 21px;
-  }
 }
 </style>

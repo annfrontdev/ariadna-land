@@ -49,9 +49,16 @@ const contacts = [
   }
 
   @media (max-width: $tablet) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
     p {
       font-size: 22px;
       line-height: 30px;
+    }
+
+    h2 {
+      margin-bottom: 0;
     }
 
     &__list {

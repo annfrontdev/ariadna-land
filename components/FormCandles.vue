@@ -9,7 +9,7 @@ const photos = [
   },
   {
     id: 2,
-    img: "content/form-candles-2.png",
+    img: "content/form-candles-2.jpg",
     alt: "формовая свеча 2",
   },
   {
