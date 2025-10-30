@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import MapAddresses from "./components/MapAddresses.vue";
+</script>
 
 <template>
   <div class="app">
@@ -10,6 +12,7 @@
       <AromaDiffusors />
       <FormCandles />
       <BrandCandles />
+      <MapAddresses />
       <Contacts />
     </main>
     <Footer />
