@@ -34,12 +34,12 @@ const benefits = [
 const photos = [
   {
     id: 1,
-    img: "content/about-1.png",
+    img: "content/about-1.webp",
     alt: "свеча 1",
   },
   {
     id: 2,
-    img: "content/about-2.png",
+    img: "content/about-2.webp",
     alt: "свеча 2",
   },
 ];

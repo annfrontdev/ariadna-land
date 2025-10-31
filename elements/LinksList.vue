@@ -9,11 +9,13 @@ defineProps({
     <li v-for="link in list" :key="link.id">
       <a :href="link.path">
         <span v-if="link.title"> {{ link.title }}</span>
-        <img
+
+        <NuxtImg
           v-if="link.img"
           :src="link.img"
-          width="120"
+          loading="lazy"
           :alt="link.alt || 'Картинка'"
+          width="120"
         />
       </a>
     </li>

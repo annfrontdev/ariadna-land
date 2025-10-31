@@ -17,6 +17,11 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener("resize", updateStretch);
 });
+
+const promo_images = [
+  { path: "/content/promo-1.webp", alt: "промо свеча 1" },
+  { path: "/content/promo-2.webp", alt: "промо свеча 2" },
+];
 </script>
 
 <template>
@@ -32,12 +37,8 @@ onUnmounted(() => {
           >
         </div>
 
-        <div class="promo__photo">
-          <img src="/content/promo-2.jpg" alt="промо свеча 2" />
-        </div>
-
-        <div class="promo__photo">
-          <img src="/content/promo-1.jpg" alt="промо свеча 1" />
+        <div v-for="im in promo_images" class="promo__photo">
+          <img :src="im.path" :alt="im.alt" />
         </div>
 
         <NuxtLink to="/contacts" class="promo__button">
@@ -54,12 +55,6 @@ onUnmounted(() => {
   @include vertical-margin;
   display: flex;
   justify-content: center;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 
   &__grid {
     display: grid;
@@ -103,16 +98,23 @@ onUnmounted(() => {
   }
 
   &__photo {
+    background-color: rgba($text, 0.1);
     overflow: hidden;
     grid-column: 1 / 2;
     grid-row: 2 / -1;
-    border-bottom-left-radius: clamp(80px, 10vw, 140px);
+    border-bottom-left-radius: $lg-radius;
 
     &:nth-of-type(2) {
       grid-column: 2 / 3;
       grid-row: 1 / 3;
       border-radius: 0;
-      border-top-right-radius: clamp(80px, 10vw, 140px);
+      border-top-right-radius: $lg-radius;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -129,7 +131,6 @@ onUnmounted(() => {
 
   @media (max-width: $tablet) {
     &__grid {
-      grid-template-columns: 1fr 1fr;
       gap: 8px;
     }
 
@@ -141,7 +142,22 @@ onUnmounted(() => {
     }
   }
 
+  @media (max-width: $mobile-tablet) {
+    &__grid {
+      grid-template-columns: 50% 50%;
+    }
+
+    &__photo {
+      border-bottom-left-radius: $s-radius;
+
+      &:nth-of-type(2) {
+        border-top-right-radius: $s-radius;
+      }
+    }
+  }
+
   @media (max-width: $mobile) {
+
     &__title {
       padding: 2px;
       padding-left: 2px;

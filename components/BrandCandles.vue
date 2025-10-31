@@ -3,17 +3,17 @@ import SectionTitle from "~/elements/SectionTitle.vue";
 const photos = [
   {
     id: 1,
-    img: "content/brand-candles-1.png",
+    img: "content/brand-candles-1.webp",
     alt: "брендированная свеча 1",
   },
   {
     id: 2,
-    img: "content/brand-candles-2.png",
+    img: "content/brand-candles-2.webp",
     alt: "брендированная свеча 2",
   },
   {
     id: 3,
-    img: "content/brand-candles-3.png",
+    img: "content/brand-candles-3.webp",
     alt: "брендированная свеча 3",
   },
 ];
@@ -27,7 +27,7 @@ const photos = [
 
       <div class="brand-candles__photos">
         <div v-for="p in photos" :key="p.id" class="brand-candles__photo">
-          <img :src="p.img" :alt="p.alt" />
+          <NuxtImg :src="p.img" loading="lazy" :alt="p.alt" />
         </div>
       </div>
     </div>

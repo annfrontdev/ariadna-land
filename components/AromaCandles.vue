@@ -6,17 +6,17 @@ import CommonList from "~/elements/CommonList.vue";
 const photos = [
   {
     id: 1,
-    img: "content/candles-1.jpg",
+    img: "content/candles-1.webp",
     alt: "аромасвеча 1",
   },
   {
     id: 2,
-    img: "content/candles-2.jpg",
+    img: "content/candles-2.webp",
     alt: "аромасвеча 2",
   },
   {
     id: 3,
-    img: "content/candles-3.jpg",
+    img: "content/candles-3.webp",
     alt: "аромасвеча 3",
   },
 ];

@@ -4,17 +4,17 @@ import PhotosGrid from "./PhotosGrid.vue";
 const photos = [
   {
     id: 1,
-    img: "content/form-candles-1.png",
+    img: "content/form-candles-1.webp",
     alt: "формовая свеча 1",
   },
   {
     id: 2,
-    img: "content/form-candles-2.jpg",
+    img: "content/form-candles-2.webp",
     alt: "формовая свеча 2",
   },
   {
     id: 3,
-    img: "content/form-candles-3.png",
+    img: "content/form-candles-3.webp",
     alt: "формовая свеча 3",
   },
 ];

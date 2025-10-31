@@ -3,6 +3,14 @@ $text: #000000;
 $primary: #ffffff;
 $secondary: #d9d9d9;
 
+$xs-radius: 40px;
+$s-radius: 80px;
+$lg-radius: 160px;
+
+$mobile: 430px;
+$mobile-tablet: 768px;
+$tablet: 1025px;
+
 @mixin font-primary {
   font-family: "Jost", sans-serif;
   font-weight: 300;
@@ -27,17 +35,6 @@ $secondary: #d9d9d9;
   font-weight: 400;
   font-style: normal;
 }
-
-// Mobile (до 430px) - iPhone 14/15 Pro Max
-$mobile: 430px;
-// Phablet (431px - 767px) - крупные телефоны
-$phablet: 767px;
-// Tablet (768px - 1023px) - iPad, планшеты
-$tablet: 1025px;
-// Laptop (1024px - 1439px) - ноутбуки
-$laptop: 1439px;
-// Desktop (1440px+) - большие мониторы
-$desktop: 1440px;
 
 @mixin vertical-margin {
   margin-top: 120px;
@@ -65,7 +62,7 @@ $desktop: 1440px;
 }
 
 @mixin grid-content {
-  gap: 73px;
+  gap: 5vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;

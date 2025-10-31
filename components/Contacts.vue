@@ -2,9 +2,9 @@
 import LinksList from "~/elements/LinksList.vue";
 import SectionTitle from "~/elements/SectionTitle.vue";
 const contacts = [
-  { id: 1, path: "https://t.me/ZaryaVechernyaya", img: "content/telegram.png" },
-  { id: 2, path: "https://wa.me/79108544377", img: "content/whatsapp.png" },
-  { id: 3, path: "https://vk.com/ldrswg", img: "content/vk.png" },
+  { id: 1, path: "https://t.me/ZaryaVechernyaya", img: "content/telegram.webp" },
+  { id: 2, path: "https://wa.me/79108544377", img: "content/whatsapp.webp" },
+  { id: 3, path: "https://vk.com/ldrswg", img: "content/vk.webp" },
 ];
 </script>
 
@@ -13,7 +13,7 @@ const contacts = [
     <div class="wrapper">
       <div class="contacts__content">
         <SectionTitle>написать нам</SectionTitle>
-        <p>задать вопрос или забрать бесплатный чек-лист в соц.сетях</p>
+        <p>задать вопрос или запросить прайс</p>
 
         <LinksList :list="contacts" class="contacts__list"></LinksList>
       </div>
