@@ -66,8 +66,14 @@ const photos = [
     margin: 27px 0;
   }
 
+  &__photos {
+    display: flex;
+    justify-content: center;
+  }
+
   &__content {
-    @include grid-content;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
 

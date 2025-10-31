@@ -44,9 +44,10 @@ defineProps({
   }
 
   &__content {
+    width: 100%;
     display: grid;
     grid-template-columns: 371px 171px;
-    column-gap: 29px;
+    column-gap: 4%;
     height: 466px;
     justify-content: center;
     z-index: 1;

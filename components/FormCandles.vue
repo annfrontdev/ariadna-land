@@ -44,6 +44,5 @@ const photos = [
 <style lang="scss">
 .form-candles {
   @include vertical-margin;
-  padding-top: 120px;
 }
 </style>

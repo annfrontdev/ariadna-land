@@ -85,7 +85,9 @@ const photos = [
   }
 
   &__content {
-    @include grid-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
   }
 

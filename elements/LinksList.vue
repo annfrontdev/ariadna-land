@@ -2,11 +2,12 @@
 defineProps({
   list: Array,
 });
+defineEmits(["show-section"]);
 </script>
 
 <template>
   <ul class="list">
-    <li v-for="link in list" :key="link.id">
+    <li @click="$emit('show-section')" v-for="link in list" :key="link.id">
       <a :href="link.path">
         <span v-if="link.title"> {{ link.title }}</span>
 

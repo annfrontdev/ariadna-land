@@ -62,7 +62,7 @@ onUnmounted(() => {
           :class="{ open: menuIsVisible }"
         >
           <div class="header__menu-backdrop" @click="toggleMenu"></div>
-          <LinksList :list="links"></LinksList>
+          <LinksList :list="links" @show-section="toggleMenu"></LinksList>
         </div>
       </Transition>
     </div>
