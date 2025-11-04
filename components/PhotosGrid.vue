@@ -46,8 +46,7 @@ defineProps({
   }
 
   &__photo {
-    overflow: hidden;
-    background-color: rgba($text, 0.1);
+    @include photo-bg;
 
     img {
       object-fit: cover;

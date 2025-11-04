@@ -19,8 +19,8 @@ onUnmounted(() => {
 });
 
 const promo_images = [
-  { path: "/content/promo-1.webp", alt: "промо свеча 1" },
-  { path: "/content/promo-2.webp", alt: "промо свеча 2" },
+  { path: "content/promo-1.webp", alt: "промо свеча 1" },
+  { path: "content/promo-2.webp", alt: "промо свеча 2" },
 ];
 </script>
 
@@ -38,7 +38,7 @@ const promo_images = [
         </div>
 
         <div v-for="im in promo_images" class="promo__photo">
-          <img :src="im.path" :alt="im.alt" />
+          <NuxtImg :src="im.path" :alt="im.alt" /> 
         </div>
 
         <NuxtLink to="/contacts" class="promo__button">
@@ -98,8 +98,7 @@ const promo_images = [
   }
 
   &__photo {
-    background-color: rgba($text, 0.1);
-    overflow: hidden;
+    @include photo-bg;
     grid-column: 1 / 2;
     grid-row: 2 / -1;
     border-bottom-left-radius: $lg-radius;
@@ -157,7 +156,6 @@ const promo_images = [
   }
 
   @media (max-width: $mobile) {
-
     &__title {
       padding: 2px;
       padding-left: 2px;

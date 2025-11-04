@@ -46,13 +46,18 @@ $tablet: 1025px;
   }
 }
 
+@mixin photo-bg {
+  background-color: rgba($text, 0.1);
+  overflow: hidden;
+}
+
 @mixin horizontal-padding {
   padding-left: 127px;
   padding-right: 127px;
 
   @media (max-width: 1200px) {
-  padding-left: 64px;
-  padding-right: 64px;
+    padding-left: 64px;
+    padding-right: 64px;
   }
 
   @media (max-width: $tablet) {

@@ -26,8 +26,8 @@ defineProps({
   position: relative;
 
   &__photo {
+    @include photo-bg;
     height: 100%;
-    overflow: hidden;
     border-bottom-left-radius: $lg-radius;
 
     &:nth-child(2) {

@@ -55,7 +55,7 @@ const photos = [
   }
 
   &__photo {
-    overflow: hidden;
+    @include photo-bg;
 
     img {
       width: 100%;
