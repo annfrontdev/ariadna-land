@@ -2,9 +2,9 @@
 import LinksList from "~/elements/LinksList.vue";
 import SectionTitle from "~/elements/SectionTitle.vue";
 const contacts = [
-  { id: 1, path: "https://t.me/ZaryaVechernyaya", img: "content/telegram.webp" },
-  { id: 2, path: "https://wa.me/79108544377", img: "content/whatsapp.webp" },
-  { id: 3, path: "https://vk.com/ldrswg", img: "content/vk.webp" },
+  { id: 1, path: "https://t.me/ZaryaVechernyaya", alt:'telegram логотип',  img: "content/telegram.webp" },
+  { id: 2, path: "https://wa.me/79108544377", alt:'whatsapp логотип',  img: "content/whatsapp.webp" },
+  { id: 3, path: "https://vk.com/ldrswg", alt:'vk логотип',  img: "content/vk.webp" },
 ];
 </script>
 

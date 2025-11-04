@@ -102,6 +102,7 @@ const promo_images = [
     grid-column: 1 / 2;
     grid-row: 2 / -1;
     border-bottom-left-radius: $lg-radius;
+    min-height: 150px;
 
     &:nth-of-type(2) {
       grid-column: 2 / 3;
