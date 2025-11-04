@@ -8,11 +8,11 @@ defineEmits(["show-section"]);
 <template>
   <ul class="list">
     <li @click="$emit('show-section')" v-for="link in list" :key="link.id">
-      <a :href="link.path">
+      <NuxtLink :href="link.path">
         <span v-if="link.title"> {{ link.title }}</span>
 
         <NuxtImg :src="link.img" loading="lazy" :alt="link.alt" width="120" />
-      </a>
+      </NuxtLink>
     </li>
   </ul>
 </template>

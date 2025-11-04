@@ -82,3 +82,9 @@ $tablet: 1025px;
     gap: 24px;
   }
 }
+
+@mixin reset-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

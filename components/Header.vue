@@ -1,12 +1,13 @@
 <script setup>
 import AriadnaLogo from "~/elements/AriadnaLogo.vue";
 import LinksList from "~/elements/LinksList.vue";
+import { scrollToSection } from "~/utils";
 
 const links = [
-  { id: 1, title: "Аромасвечи", path: "#candles" },
-  { id: 2, title: "Диффузоры", path: "#diffusers" },
-  { id: 3, title: "Мерч", path: "#brand" },
-  { id: 4, title: "Контакты", path: "#contacts" },
+  { id: 1, title: "Аромасвечи", path: "candles" },
+  { id: 2, title: "Диффузоры", path: "diffusers" },
+  { id: 3, title: "Мерч", path: "brand" },
+  { id: 4, title: "Контакты", path: "contacts" },
 ];
 
 const headerLinks = {
@@ -48,11 +49,23 @@ onUnmounted(() => {
       </nav>
 
       <nav class="header__nav-desktop" aria-label="Меню">
-        <LinksList :list="headerLinks.left"></LinksList>
+        <ul>
+          <li v-for="link in headerLinks.left" :key="link.id">
+            <button @click="() => scrollToSection(link.path)">
+              {{ link.title }}
+            </button>
+          </li>
+        </ul>
 
         <AriadnaLogo />
 
-        <LinksList :list="headerLinks.right"></LinksList>
+        <ul>
+          <li v-for="link in headerLinks.right" :key="link.id">
+            <button @click="() => scrollToSection(link.path)">
+              {{ link.title }}
+            </button>
+          </li>
+        </ul>
       </nav>
 
       <Transition name="slide-fade">
@@ -99,15 +112,17 @@ onUnmounted(() => {
   }
 
   ul {
+    @include reset-list;
     display: flex;
     gap: 50px;
     padding: 50px 0 40px 0;
 
-    a {
+    button {
       @include font-tertiary;
       color: inherit;
-      text-decoration: none;
       font-size: 24px;
+      border: none;
+      background: transparent;
     }
 
     &::after {
