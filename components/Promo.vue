@@ -38,9 +38,7 @@ const promo_images = [
         </div>
 
         <div v-for="im in promo_images" class="promo__photo">
-          <NuxtImg :src="im.path" :alt="im.alt" />
-          <NuxtImg src="/content/promo-1.webp" />
-          <NuxtImg src="/content/promo-2.webp" />
+          <img :src="im.path" :alt="im.alt" />
         </div>
 
         <NuxtLink to="/contacts" class="promo__button">

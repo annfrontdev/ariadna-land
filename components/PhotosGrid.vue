@@ -8,7 +8,7 @@ defineProps({
   <div class="photos-grid">
     <div class="photos-grid__photos">
       <div v-for="p in photos" :key="p.id" class="photos-grid__photo">
-        <NuxtImg :src="p.img" loading="lazy" :alt="p.alt" />
+        <img :src="p.img" loading="lazy" :alt="p.alt" />
       </div>
 
       <div class="photos-grid__description">

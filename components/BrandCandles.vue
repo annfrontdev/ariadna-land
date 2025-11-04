@@ -27,7 +27,7 @@ const photos = [
 
       <div class="brand-candles__photos">
         <div v-for="p in photos" :key="p.id" class="brand-candles__photo">
-          <NuxtImg :src="p.img" loading="lazy" :alt="p.alt" />
+          <img :src="p.img" loading="lazy" :alt="p.alt" />
         </div>
       </div>
     </div>

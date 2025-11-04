@@ -11,7 +11,7 @@ defineEmits(["show-section"]);
       <NuxtLink :href="link.path">
         <span v-if="link.title"> {{ link.title }}</span>
 
-        <NuxtImg :src="link.img" loading="lazy" :alt="link.alt" width="120" />
+        <img :src="link.img" loading="lazy" :alt="link.alt" width="120" />
       </NuxtLink>
     </li>
   </ul>

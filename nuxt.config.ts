@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxt/image", "@nuxt/content"],
+  modules: ["@nuxt/eslint", "@nuxt/icon"],
   ssr: false,
   app: {
     baseURL: "/ariadna-land/",
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "/assets/styles/variables.scss";',
+          additionalData: '@use "/assets/styles/variables.scss" as *;',
         },
       },
     },
@@ -42,9 +42,5 @@ export default defineNuxtConfig({
         dir: "./assets/icons",
       },
     ],
-  },
-  image: {
-    provider: 'ipx',
-    dir: 'public', 
   },
 });

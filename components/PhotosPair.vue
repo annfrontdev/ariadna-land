@@ -8,11 +8,11 @@ defineProps({
   <div class="photos-pair">
     <div class="photos-pair__content">
       <div v-for="p in photos" :key="p.id" class="photos-pair__photo">
-        <NuxtImg :src="p.img" loading="lazy" :alt="p.alt" />
+        <img :src="p.img" loading="lazy" :alt="p.alt" />
       </div>
     </div>
 
-    <NuxtImg
+    <img
       v-if="!hideEllipse"
       src="/ellipse.svg"
       class="photos-pair__ellipse"
