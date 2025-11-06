@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import AriadnaLogo from "@/elements/AriadnaLogo.vue";
+import AriadnaLogo from '@/elements/AriadnaLogo.vue';
 
 const links = [
-  { id: 1, title: "Аромасвечи", path: "candles" },
-  { id: 2, title: "Диффузоры", path: "diffusers" },
-  { id: 3, title: "Мерч", path: "brand" },
-  { id: 4, title: "Контакты", path: "contacts" },
+  { id: 1, title: 'Аромасвечи', path: 'candles' },
+  { id: 2, title: 'Диффузоры', path: 'diffusers' },
+  { id: 3, title: 'Мерч', path: 'brand' },
+  { id: 4, title: 'Контакты', path: 'contacts' },
 ];
 
 const headerLinks = {
@@ -18,7 +18,7 @@ const isMenuVisible = ref(false);
 const toggleMenuVisibility = () => {
   isMenuVisible.value = !isMenuVisible.value;
 
-  document.body.style.overflow = isMenuVisible.value ? "hidden" : "auto";
+  document.body.style.overflow = isMenuVisible.value ? 'hidden' : 'auto';
 };
 </script>
 
@@ -28,11 +28,7 @@ const toggleMenuVisibility = () => {
       <nav class="header__nav-mobile" aria-label="Меню">
         <div />
         <AriadnaLogo />
-        <button
-          type="button"
-          class="header__menu-opener"
-          @click="toggleMenuVisibility"
-        >
+        <button type="button" class="header__menu-opener" @click="toggleMenuVisibility">
           <Icon name="my-icon:burger" size="60" />
         </button>
       </nav>
@@ -44,11 +40,7 @@ const toggleMenuVisibility = () => {
       </nav>
 
       <Transition name="slide-fade">
-        <div
-          v-if="isMenuVisible"
-          class="header__mobile-menu"
-          :class="{ open: isMenuVisible }"
-        >
+        <div v-if="isMenuVisible" class="header__mobile-menu" :class="{ open: isMenuVisible }">
           <div class="header__overlay" @click="toggleMenuVisibility" />
           <NavigationList :links="links" @show-section="toggleMenuVisibility" />
         </div>
@@ -78,7 +70,7 @@ const toggleMenuVisibility = () => {
     position: relative;
 
     &::after {
-      content: "";
+      content: '';
       width: 100%;
       height: 2px;
       background-color: $text;

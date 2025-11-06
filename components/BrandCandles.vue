@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import SectionTitle from "@/elements/SectionTitle.vue";
+import SectionTitle from '@/elements/SectionTitle.vue';
 
 const photos = [
   {
     id: 1,
-    img: "content/brand-candles-1.webp",
-    alt: "брендированная свеча 1",
+    img: 'content/brand-candles-1.webp',
+    alt: 'брендированная свеча 1',
   },
   {
     id: 2,
-    img: "content/brand-candles-2.webp",
-    alt: "брендированная свеча 2",
+    img: 'content/brand-candles-2.webp',
+    alt: 'брендированная свеча 2',
   },
   {
     id: 3,
-    img: "content/brand-candles-3.webp",
-    alt: "брендированная свеча 3",
+    img: 'content/brand-candles-3.webp',
+    alt: 'брендированная свеча 3',
   },
 ];
 </script>

@@ -12,25 +12,25 @@ $mobile-tablet: 768px;
 $tablet: 1025px;
 
 @mixin font-primary {
-  font-family: "Jost", sans-serif;
+  font-family: 'Jost', sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
 @mixin font-secondary {
-  font-family: "Cormorant SC", serif;
+  font-family: 'Cormorant SC', serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @mixin font-fourth {
-  font-family: "Marcellus SC", sans-serif;
+  font-family: 'Marcellus SC', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 @mixin font-tertiary {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;

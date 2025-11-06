@@ -1,5 +1,25 @@
 <script setup lang="ts">
-import NavigationButton from "@/elements/NavigationButton.vue";
+import NavigationButton from '@/elements/NavigationButton.vue';
+
+import regularPhotoPromo1 from '@/assets/photos/regular/promo-1.webp';
+import retinaPhotoPromo1 from '@/assets/photos/retina/promo-1.webp';
+import regularPhotoPromo2 from '@/assets/photos/regular/promo-2.webp';
+import retinaPhotoPromo2 from '@/assets/photos/retina/promo-2.webp';
+
+const promo_images = [
+  {
+    regular: regularPhotoPromo1,
+    retina: retinaPhotoPromo1,
+    alt: 'промо свеча 1',
+    id: 0,
+  },
+  {
+    regular: regularPhotoPromo2,
+    retina: retinaPhotoPromo2,
+    alt: 'промо свеча 2',
+    id: 1,
+  },
+];
 
 const titleRef = ref();
 const titleWrapperRef = ref();
@@ -13,17 +33,12 @@ function updateStretch() {
 
 onMounted(() => {
   updateStretch();
-  window.addEventListener("resize", updateStretch);
+  window.addEventListener('resize', updateStretch);
 });
 
 onUnmounted(() => {
-  window.removeEventListener("resize", updateStretch);
+  window.removeEventListener('resize', updateStretch);
 });
-
-const promo_images = [
-  { path: "content/promo-1.webp", alt: "промо свеча 1" },
-  { path: "content/promo-2.webp", alt: "промо свеча 2" },
-];
 </script>
 
 <template>
@@ -31,16 +46,13 @@ const promo_images = [
     <div class="wrapper">
       <div class="promo__grid">
         <div ref="titleWrapperRef" class="promo__title">
-          <span
-            ref="titleRef"
-            :style="{ transform: `scale(${stretchFactor})` }"
-          >
-            Ariadna premium</span
-          >
+          <span ref="titleRef" :style="{ transform: `scale(${stretchFactor})` }">
+            Ariadna premium
+          </span>
         </div>
 
-        <div v-for="im,id in promo_images" :key="id" class="promo__photo">
-          <img :src="im.path" :alt="im.alt" >
+        <div v-for="(im, id) in promo_images" :key="id" class="promo__photo">
+          <img :src="im.regular" :alt="im.alt" :srcset="`${im.retina} 2x`" >
         </div>
 
         <NavigationButton link="contacts" class="promo__button">
@@ -85,7 +97,7 @@ const promo_images = [
       background-color: rgba($text, 0.1);
     }
 
-     &:active {
+    &:active {
       background-color: rgba($text, 0.2);
     }
   }

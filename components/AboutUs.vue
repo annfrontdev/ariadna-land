@@ -1,6 +1,26 @@
 <script setup lang="ts">
-import SectionTitle from "@/elements/SectionTitle.vue";
-import CommonList from "@/elements/CommonList.vue";
+import SectionTitle from '@/elements/SectionTitle.vue';
+import CommonList from '@/elements/CommonList.vue';
+
+import regularPhotoAbout1 from '@/assets/photos/regular/about-1.webp';
+import regularPhotoAbout2 from '@/assets/photos/regular/about-2.webp';
+import retinaPhotoAbout1 from '@/assets/photos/retina/about-1.webp';
+import retinaPhotoAbout2 from '@/assets/photos/retina/about-2.webp';
+
+const photos = [
+  {
+    regular: regularPhotoAbout1,
+    retina: retinaPhotoAbout1,
+    alt: 'свеча 1',
+    id: 0,
+  },
+  {
+    regular: regularPhotoAbout2,
+    retina: retinaPhotoAbout2,
+    alt: 'свеча 2',
+    id: 1,
+  },
+];
 
 const benefits = [
   {
@@ -29,19 +49,6 @@ const benefits = [
       прекрасный способ выразить свою заботу и любовь близким.`,
   },
 ];
-
-const photos = [
-  {
-    id: 1,
-    img: "content/about-1.webp",
-    alt: "свеча 1",
-  },
-  {
-    id: 2,
-    img: "content/about-2.webp",
-    alt: "свеча 2",
-  },
-];
 </script>
 
 <template>
@@ -51,8 +58,9 @@ const photos = [
         <SectionTitle>О нас</SectionTitle>
         <div class="about-us__text">
           <p>
-            Мы верим, что детали создают атмосферу, поэтому каждая наше изделие
-            – это уникальное произведение искусства, <br >
+            Мы верим, что детали создают атмосферу, поэтому каждая наше изделие – это уникальное
+            произведение искусства,
+            <br >
             способное преобразить любой интерьер. Ariadna premium – это:
           </p>
 

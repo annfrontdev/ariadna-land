@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Photo } from "@/types";
+import type { Photo } from '@/types';
 
 withDefaults(
   defineProps<{
@@ -8,7 +8,7 @@ withDefaults(
   }>(),
   {
     photos: () => [],
-    hideEllipse: () => false
+    hideEllipse: () => false,
   }
 );
 </script>
@@ -16,15 +16,11 @@ withDefaults(
   <div v-if="photos?.length" class="photos-pair">
     <div class="photos-pair__content">
       <div v-for="p in photos" :key="p.id" class="photos-pair__photo">
-        <img :src="p.img" loading="lazy" :alt="p.alt">
+        <img :src="p.regular" :alt="p.alt" :srcset="`${p.retina} 2x`" loading="lazy" >
       </div>
     </div>
 
-    <img
-      v-if="!hideEllipse"
-      src="/ellipse.svg"
-      class="photos-pair__ellipse"
-      alt="эллипс">
+    <img v-if="!hideEllipse" src="/ellipse.svg" class="photos-pair__ellipse" alt="эллипс" >
   </div>
 </template>
 

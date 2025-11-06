@@ -17,7 +17,7 @@ withDefaults(
 <template>
   <ul class="common-list">
     <li v-for="link in list" :key="link.id">
-      <span v-if="link.text"> {{ link.text }}</span>
+      <span v-if="link.text">{{ link.text }}</span>
     </li>
   </ul>
 </template>
@@ -36,7 +36,7 @@ withDefaults(
     }
 
     &::before {
-      content: "";
+      content: '';
       position: static;
       display: inline-block;
       width: 2px;

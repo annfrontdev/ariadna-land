@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Photo } from "@/types";
+import type { Photo } from '@/types';
 
 withDefaults(
   defineProps<{

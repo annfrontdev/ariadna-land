@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import NavigationButton from "@/elements/NavigationButton.vue";
+import NavigationButton from '@/elements/NavigationButton.vue';
 
 type Link = {
   id: number;
@@ -16,7 +16,7 @@ withDefaults(
   }
 );
 
-defineEmits(["show-section"]);
+defineEmits(['show-section']);
 </script>
 
 <template>

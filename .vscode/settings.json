@@ -1,14 +1,12 @@
 {
-    "cSpell.language": "en,ru",
-    "cSpell.overrides": [
-
-    ],
-    "cSpell.customDictionaries": {
-        "custom-dictionary-workspace": {
-            "name": "custom-dictionary-workspace",
-            "path": "${workspaceFolder:ariadna-land}/.cspell/custom-dictionary-workspace.txt",
-            "addWords": true,
-            "scope": "workspace"
-        }
+  "cSpell.language": "en,ru",
+  "cSpell.overrides": [],
+  "cSpell.customDictionaries": {
+    "custom-dictionary-workspace": {
+      "name": "custom-dictionary-workspace",
+      "path": "${workspaceFolder:ariadna-land}/.cspell/custom-dictionary-workspace.txt",
+      "addWords": true,
+      "scope": "workspace"
     }
+  }
 }

@@ -1,24 +1,24 @@
 <script setup lang="ts">
-import SectionTitle from "@/elements/SectionTitle.vue";
+import SectionTitle from '@/elements/SectionTitle.vue';
 
 const contacts = [
   {
     id: 1,
-    path: "https://t.me/ZaryaVechernyaya",
-    alt: "telegram логотип",
-    img: "content/telegram.webp",
+    path: 'https://t.me/ZaryaVechernyaya',
+    alt: 'telegram логотип',
+    img: 'content/telegram.webp',
   },
   {
     id: 2,
-    path: "https://wa.me/79108544377",
-    alt: "whatsapp логотип",
-    img: "content/whatsapp.webp",
+    path: 'https://wa.me/79108544377',
+    alt: 'whatsapp логотип',
+    img: 'content/whatsapp.webp',
   },
   {
     id: 3,
-    path: "https://vk.com/ldrswg",
-    alt: "vk логотип",
-    img: "content/vk.webp",
+    path: 'https://vk.com/ldrswg',
+    alt: 'vk логотип',
+    img: 'content/vk.webp',
   },
 ];
 </script>
@@ -33,7 +33,7 @@ const contacts = [
         <ul class="contacts__list">
           <li v-for="link in contacts" :key="link.id">
             <a :href="link.path">
-              <img :src="link.img" loading="lazy" :alt="link.alt" width="120" >
+              <img :src="link.img" loading="lazy" :alt="link.alt" width="120">
             </a>
           </li>
         </ul>

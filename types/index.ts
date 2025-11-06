@@ -1,5 +1,6 @@
 export interface Photo {
-  id: number;
-  img: string;
+  retina: string;
+  regular: string;
   alt: string;
+  id: number;
 }

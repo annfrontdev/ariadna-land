@@ -1,0 +1,3 @@
+{
+  "ignorePaths": [".prettierrc.ts", ".prettierrc.js", ".prettierrc", "node_modules/**", "dist/**"]
+}

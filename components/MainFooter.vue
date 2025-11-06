@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { scrollToSection } from "@/utils/scroll";
+import { scrollToSection } from '@/utils/scroll';
 
 const list = [
-  { id: 1, title: "Аромасвечи с медитацией", path: "candles" },
-  { id: 2, title: "Диффузоры", path: "diffusers" },
-  { id: 4, title: "Формовые свечи", path: "form" },
-  { id: 3, title: "Брендирование свечей", path: "brand" },
+  { id: 1, title: 'Аромасвечи с медитацией', path: 'candles' },
+  { id: 2, title: 'Диффузоры', path: 'diffusers' },
+  { id: 4, title: 'Формовые свечи', path: 'form' },
+  { id: 3, title: 'Брендирование свечей', path: 'brand' },
 ];
 </script>
 
