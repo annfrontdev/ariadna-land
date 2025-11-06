@@ -1,4 +1,6 @@
-<script setup>
+<script setup lang="ts">
+import NavigationButton from "@/elements/NavigationButton.vue";
+
 const titleRef = ref();
 const titleWrapperRef = ref();
 const stretchFactor = ref(1);
@@ -28,7 +30,7 @@ const promo_images = [
   <div class="promo">
     <div class="wrapper">
       <div class="promo__grid">
-        <div class="promo__title" ref="titleWrapperRef">
+        <div ref="titleWrapperRef" class="promo__title">
           <span
             ref="titleRef"
             :style="{ transform: `scale(${stretchFactor})` }"
@@ -37,14 +39,14 @@ const promo_images = [
           >
         </div>
 
-        <div v-for="im in promo_images" class="promo__photo">
-          <img :src="im.path" :alt="im.alt" />
+        <div v-for="im,id in promo_images" :key="id" class="promo__photo">
+          <img :src="im.path" :alt="im.alt" >
         </div>
 
-        <NuxtLink to="/contacts" class="promo__button">
+        <NavigationButton link="contacts" class="promo__button">
           <span>НАПИСАТЬ НАМ</span>
           <Icon name="my-icon:arrow" />
-        </NuxtLink>
+        </NavigationButton>
       </div>
     </div>
   </div>
@@ -76,6 +78,16 @@ const promo_images = [
     grid-template-columns: max-content max-content;
     align-items: center;
     gap: 14px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: rgba($text, 0.1);
+    }
+
+     &:active {
+      background-color: rgba($text, 0.2);
+    }
   }
 
   &__title {

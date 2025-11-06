@@ -1,7 +1,5 @@
-<script setup>
-import AriadnaLogo from "~/elements/AriadnaLogo.vue";
-import LinksList from "~/elements/LinksList.vue";
-import { scrollToSection } from "~/utils";
+<script setup lang="ts">
+import AriadnaLogo from "@/elements/AriadnaLogo.vue";
 
 const links = [
   { id: 1, title: "Аромасвечи", path: "candles" },
@@ -11,71 +9,48 @@ const links = [
 ];
 
 const headerLinks = {
-  left: [...links.slice(0, links.length / 2)],
-  right: [...links.slice(links.length / 2)],
+  left: links.slice(0, links.length / 2),
+  right: links.slice(links.length / 2),
 };
 
-const menuIsVisible = ref(false);
+const isMenuVisible = ref(false);
 
-const toggleMenu = () => {
-  menuIsVisible.value = !menuIsVisible.value;
+const toggleMenuVisibility = () => {
+  isMenuVisible.value = !isMenuVisible.value;
 
-  document.body.style.overflow = menuIsVisible.value ? "hidden" : "auto";
+  document.body.style.overflow = isMenuVisible.value ? "hidden" : "auto";
 };
-
-function closeMenu() {
-  menuIsVisible.value = false;
-  document.body.style.overflow = "auto";
-}
-
-onMounted(() => {
-  window.addEventListener("resize", closeMenu);
-});
-
-onUnmounted(() => {
-  window.removeEventListener("resize", closeMenu);
-});
 </script>
 
 <template>
   <header class="header">
     <div class="wrapper header__wrapper">
       <nav class="header__nav-mobile" aria-label="Меню">
-        <div></div>
+        <div />
         <AriadnaLogo />
-        <button type="button" @click="toggleMenu" class="header__menu-opener">
+        <button
+          type="button"
+          class="header__menu-opener"
+          @click="toggleMenuVisibility"
+        >
           <Icon name="my-icon:burger" size="60" />
         </button>
       </nav>
 
       <nav class="header__nav-desktop" aria-label="Меню">
-        <ul>
-          <li v-for="link in headerLinks.left" :key="link.id">
-            <button @click="() => scrollToSection(link.path)">
-              {{ link.title }}
-            </button>
-          </li>
-        </ul>
-
+        <NavigationList :links="headerLinks.left" />
         <AriadnaLogo />
-
-        <ul>
-          <li v-for="link in headerLinks.right" :key="link.id">
-            <button @click="() => scrollToSection(link.path)">
-              {{ link.title }}
-            </button>
-          </li>
-        </ul>
+        <NavigationList :links="headerLinks.right" />
       </nav>
 
       <Transition name="slide-fade">
         <div
-          v-if="menuIsVisible"
+          v-if="isMenuVisible"
           class="header__mobile-menu"
-          :class="{ open: menuIsVisible }"
+          :class="{ open: isMenuVisible }"
         >
-          <div class="header__menu-backdrop" @click="toggleMenu"></div>
-          <LinksList :list="links" @show-section="toggleMenu"></LinksList>
+          <div class="header__overlay" @click="toggleMenuVisibility" />
+          <NavigationList :links="links" @show-section="toggleMenuVisibility" />
         </div>
       </Transition>
     </div>
@@ -83,27 +58,15 @@ onUnmounted(() => {
 </template>
 
 <style lang="scss">
-.slide-fade-enter-active {
-  transition: all 0.3s ease-out;
-}
-
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateX(-100%);
-  opacity: 0;
-}
-
 .header {
   background-color: $primary;
+  position: relative;
 
   nav {
     width: 100%;
     position: relative;
     justify-content: space-between;
+    padding: 50px 0 40px 0;
   }
 
   svg,
@@ -111,19 +74,8 @@ onUnmounted(() => {
     flex-shrink: 0;
   }
 
-  ul {
-    @include reset-list;
-    display: flex;
-    gap: 50px;
-    padding: 50px 0 40px 0;
-
-    button {
-      @include font-tertiary;
-      color: inherit;
-      font-size: 24px;
-      border: none;
-      background: transparent;
-    }
+  &__wrapper {
+    position: relative;
 
     &::after {
       content: "";
@@ -136,12 +88,20 @@ onUnmounted(() => {
     }
   }
 
-  &__nav-mobile {
+  &__overlay,
+  &__nav-mobile,
+  &__mobile-menu.open,
+  &__mobile-menu {
     display: none;
   }
 
   &__nav-desktop {
     display: flex;
+
+    ul {
+      display: flex;
+      gap: 50px;
+    }
   }
 
   &__menu-opener {
@@ -152,12 +112,7 @@ onUnmounted(() => {
     margin: 0;
   }
 
-  &__wrapper {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__menu-backdrop {
+  &__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -167,28 +122,34 @@ onUnmounted(() => {
   }
 
   @media (max-width: $tablet) {
-    &__nav-mobile {
-      display: grid;
-      grid-template-columns: max-content 1fr max-content;
-      align-items: center;
+    nav {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      width: 60%;
+
+      ul {
+        display: none;
+      }
     }
 
     &__nav-desktop {
       display: none;
     }
 
-    &__wrapper {
-      justify-content: flex-end;
-      padding-top: 16px;
-      padding-bottom: 16px;
+    &__nav-mobile {
+      display: grid;
+      grid-template-columns: max-content 1fr max-content;
+      align-items: center;
     }
 
-    nav {
-      width: 60%;
+    &__mobile-menu.open,
+    &__mobile-menu.open .header__overlay {
+      display: block;
+    }
 
-      ul {
-        display: none;
-      }
+    &__wrapper {
+      display: flex;
+      justify-content: flex-end;
     }
 
     &__menu-opener {
@@ -216,6 +177,28 @@ onUnmounted(() => {
         z-index: 1;
         max-width: 300px;
       }
+    }
+  }
+
+  // TRANSITION
+  .slide-fade-enter-active {
+    transition: all 0.5s ease;
+
+    ul {
+      transition: all 0.5s ease-in-out 0.5s;
+    }
+  }
+
+  .slide-fade-leave-active {
+    transition: all 0.5s ease-out;
+  }
+
+  .slide-fade-enter-from,
+  .slide-fade-leave-to {
+    opacity: 0;
+
+    ul {
+      transform: translateX(-100%);
     }
   }
 }

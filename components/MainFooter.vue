@@ -1,5 +1,5 @@
-<script setup>
-import { scrollToSection } from "~/utils";
+<script setup lang="ts">
+import { scrollToSection } from "@/utils/scroll";
 
 const list = [
   { id: 1, title: "Аромасвечи с медитацией", path: "candles" },
