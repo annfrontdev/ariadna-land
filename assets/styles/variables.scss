@@ -11,6 +11,16 @@ $mobile: 430px;
 $mobile-tablet: 768px;
 $tablet: 1025px;
 
+@mixin button-nav {
+  transition: all 0.2s ease;
+  &:hover {
+    color: rgba($text, 0.5);
+  }
+  &:active {
+    color: rgba($text, 0.7);
+  }
+}
+
 @mixin font-primary {
   font-family: 'Jost', sans-serif;
   font-weight: 300;

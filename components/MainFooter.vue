@@ -43,6 +43,7 @@ const list = [
   }
 
   button {
+    @include button-nav;
     border: none;
     background: transparent;
   }

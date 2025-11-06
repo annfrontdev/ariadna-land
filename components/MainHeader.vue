@@ -54,6 +54,10 @@ const toggleMenuVisibility = () => {
   background-color: $primary;
   position: relative;
 
+  button {
+    @include button-nav;
+  }
+
   nav {
     width: 100%;
     position: relative;
