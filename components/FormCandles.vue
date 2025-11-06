@@ -1,21 +1,33 @@
 <script setup lang="ts">
 import SectionTitle from '@/elements/SectionTitle.vue';
 
+import regularPhotoForm1 from '@/assets/photos/regular/form-candles-1.webp';
+import retinaPhotoForm1 from '@/assets/photos/retina/form-candles-1.webp';
+
+import regularPhotoForm2 from '@/assets/photos/regular/form-candles-2.webp';
+import retinaPhotoForm2 from '@/assets/photos/retina/form-candles-2.webp';
+
+import regularPhotoForm3 from '@/assets/photos/regular/form-candles-3.webp';
+import retinaPhotoForm3 from '@/assets/photos/retina/form-candles-3.webp';
+
 const photos = [
   {
-    id: 1,
-    img: 'content/form-candles-1.webp',
+    regular: regularPhotoForm1,
+    retina: retinaPhotoForm1,
     alt: 'формовая свеча 1',
+    id: 0,
   },
   {
-    id: 2,
-    img: 'content/form-candles-2.webp',
+    regular: regularPhotoForm2,
+    retina: retinaPhotoForm2,
     alt: 'формовая свеча 2',
+    id: 1,
   },
   {
-    id: 3,
-    img: 'content/form-candles-3.webp',
+    regular: regularPhotoForm3,
+    retina: retinaPhotoForm3,
     alt: 'формовая свеча 3',
+    id: 2,
   },
 ];
 </script>

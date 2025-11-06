@@ -1,21 +1,33 @@
 <script setup lang="ts">
 import SectionTitle from '@/elements/SectionTitle.vue';
 
+import regularPhotoBrand1 from '@/assets/photos/regular/brand-candles-1.webp';
+import retinaPhotoBrand1 from '@/assets/photos/retina/brand-candles-1.webp';
+
+import regularPhotoBrand2 from '@/assets/photos/regular/brand-candles-2.webp';
+import retinaPhotoBrand2 from '@/assets/photos/retina/brand-candles-2.webp';
+
+import regularPhotoBrand3 from '@/assets/photos/regular/brand-candles-3.webp';
+import retinaPhotoBrand3 from '@/assets/photos/retina/brand-candles-3.webp';
+
 const photos = [
   {
-    id: 1,
-    img: 'content/brand-candles-1.webp',
+    regular: regularPhotoBrand1,
+    retina: retinaPhotoBrand1,
     alt: 'брендированная свеча 1',
+    id: 0,
   },
   {
-    id: 2,
-    img: 'content/brand-candles-2.webp',
+    regular: regularPhotoBrand2,
+    retina: retinaPhotoBrand2,
     alt: 'брендированная свеча 2',
+    id: 1,
   },
   {
-    id: 3,
-    img: 'content/brand-candles-3.webp',
+    regular: regularPhotoBrand3,
+    retina: retinaPhotoBrand3,
     alt: 'брендированная свеча 3',
+    id: 2,
   },
 ];
 </script>
@@ -28,7 +40,7 @@ const photos = [
 
       <div class="brand-candles__photos">
         <div v-for="p in photos" :key="p.id" class="brand-candles__photo">
-          <img :src="p.img" loading="lazy" :alt="p.alt" >
+          <img :src="p.regular" :alt="p.alt" :srcset="`${p.retina} 2x`" loading="lazy" />
         </div>
       </div>
     </div>

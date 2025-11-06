@@ -2,21 +2,33 @@
 import SectionTitle from '@/elements/SectionTitle.vue';
 import CommonList from '@/elements/CommonList.vue';
 
+import regularPhotoCandles1 from '@/assets/photos/regular/candles-1.webp';
+import retinaPhotoCandles1 from '@/assets/photos/retina/candles-1.webp';
+
+import regularPhotoCandles2 from '@/assets/photos/regular/candles-2.webp';
+import retinaPhotoCandles2 from '@/assets/photos/retina/candles-2.webp';
+
+import regularPhotoCandles3 from '@/assets/photos/regular/candles-3.webp';
+import retinaPhotoCandles3 from '@/assets/photos/retina/candles-3.webp';
+
 const photos = [
   {
-    id: 1,
-    img: 'content/candles-1.webp',
+    regular: regularPhotoCandles1,
+    retina: retinaPhotoCandles1,
     alt: 'аромасвеча 1',
+    id: 0,
   },
   {
-    id: 2,
-    img: 'content/candles-2.webp',
+    regular: regularPhotoCandles2,
+    retina: retinaPhotoCandles2,
     alt: 'аромасвеча 2',
+    id: 1,
   },
   {
-    id: 3,
-    img: 'content/candles-3.webp',
+    regular: regularPhotoCandles3,
+    retina: retinaPhotoCandles3,
     alt: 'аромасвеча 3',
+    id: 2,
   },
 ];
 

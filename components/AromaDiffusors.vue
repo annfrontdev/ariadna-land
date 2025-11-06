@@ -1,16 +1,24 @@
 <script setup lang="ts">
 import SectionTitle from '@/elements/SectionTitle.vue';
 
+import regularPhotoDiffusors1 from '@/assets/photos/regular/diffusors-1.webp';
+import retinaPhotoDiffusors1 from '@/assets/photos/retina/diffusors-1.webp';
+
+import regularPhotoDiffusors2 from '@/assets/photos/regular/diffusors-2.webp';
+import retinaPhotoDiffusors2 from '@/assets/photos/retina/diffusors-2.webp';
+
 const photos = [
   {
-    id: 1,
-    img: 'content/diffusors-1.webp',
-    alt: 'свеча 1',
+    regular: regularPhotoDiffusors1,
+    retina: retinaPhotoDiffusors1,
+    alt: 'диффузор 1',
+    id: 0,
   },
   {
-    id: 2,
-    img: 'content/diffusors-2.webp',
-    alt: 'свеча 2',
+    regular: regularPhotoDiffusors2,
+    retina: retinaPhotoDiffusors2,
+    alt: 'диффузор 2',
+    id: 1,
   },
 ];
 </script>
@@ -28,9 +36,9 @@ const photos = [
             </p>
             <p>
               Вдохните свежести в рабочее пространство или умиротворения в&nbsp;спальню.
-              <br >
+              <br />
               Аромадиффузор стал неотъемлемой частью образа интерьера.
-              <br >
+              <br />
               Не отказывайте себе в удовольствии наслаждаться любимыми ароматами не только через
               духи.
             </p>

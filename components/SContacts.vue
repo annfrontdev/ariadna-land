@@ -1,24 +1,36 @@
 <script setup lang="ts">
 import SectionTitle from '@/elements/SectionTitle.vue';
 
+import regularTelegram from '@/assets/photos/regular/telegram.webp';
+import retinaTelegram from '@/assets/photos/retina/telegram.webp';
+
+import regularWhatsapp from '@/assets/photos/regular/whatsapp.webp';
+import retinaWhatsapp from '@/assets/photos/retina/whatsapp.webp';
+
+import regularVk from '@/assets/photos/regular/vk.webp';
+import retinaVk from '@/assets/photos/retina/vk.webp';
+
 const contacts = [
   {
     id: 1,
     path: 'https://t.me/ZaryaVechernyaya',
     alt: 'telegram логотип',
-    img: 'content/telegram.webp',
+    regular: regularTelegram,
+    retina: retinaTelegram,
   },
   {
     id: 2,
     path: 'https://wa.me/79108544377',
     alt: 'whatsapp логотип',
-    img: 'content/whatsapp.webp',
+    regular: regularWhatsapp,
+    retina: retinaWhatsapp,
   },
   {
     id: 3,
     path: 'https://vk.com/ldrswg',
     alt: 'vk логотип',
-    img: 'content/vk.webp',
+    regular: regularVk,
+    retina: retinaVk,
   },
 ];
 </script>
@@ -33,7 +45,12 @@ const contacts = [
         <ul class="contacts__list">
           <li v-for="link in contacts" :key="link.id">
             <a :href="link.path">
-              <img :src="link.img" loading="lazy" :alt="link.alt" width="120">
+              <img
+                :src="link.regular"
+                :alt="link.alt"
+                :srcset="`${link.retina} 2x`"
+                loading="lazy"
+                width="120" />
             </a>
           </li>
         </ul>

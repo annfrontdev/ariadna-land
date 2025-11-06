@@ -52,7 +52,7 @@ onUnmounted(() => {
         </div>
 
         <div v-for="(im, id) in promo_images" :key="id" class="promo__photo">
-          <img :src="im.regular" :alt="im.alt" :srcset="`${im.retina} 2x`" >
+          <img :src="im.regular" :alt="im.alt" :srcset="`${im.retina} 2x`" />
         </div>
 
         <NavigationButton link="contacts" class="promo__button">
