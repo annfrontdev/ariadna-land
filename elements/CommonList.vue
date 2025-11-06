@@ -1,7 +1,17 @@
-<script setup>
-defineProps({
-  list: Array,
-});
+<script setup lang="ts">
+type Item = {
+  id: number;
+  text: string;
+};
+
+withDefaults(
+  defineProps<{
+    list?: Item[];
+  }>(),
+  {
+    list: () => [],
+  }
+);
 </script>
 
 <template>

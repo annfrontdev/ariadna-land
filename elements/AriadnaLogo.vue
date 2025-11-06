@@ -4,5 +4,5 @@
     alt="Ariadna Premium - логотип"
     class="logo"
     width="110"
-  />
+  >
 </template>

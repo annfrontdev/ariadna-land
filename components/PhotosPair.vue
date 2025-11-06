@@ -1,14 +1,22 @@
-<script setup>
-defineProps({
-  photos: { type: Array, required: true },
-  hideEllipse: { type: Boolean, default: false, required: false },
-});
+<script setup lang="ts">
+import type { Photo } from "@/types";
+
+withDefaults(
+  defineProps<{
+    photos?: Photo[];
+    hideEllipse?: boolean;
+  }>(),
+  {
+    photos: () => [],
+    hideEllipse: () => false
+  }
+);
 </script>
 <template>
-  <div class="photos-pair">
+  <div v-if="photos?.length" class="photos-pair">
     <div class="photos-pair__content">
       <div v-for="p in photos" :key="p.id" class="photos-pair__photo">
-        <img :src="p.img" loading="lazy" :alt="p.alt" />
+        <img :src="p.img" loading="lazy" :alt="p.alt">
       </div>
     </div>
 
@@ -16,8 +24,7 @@ defineProps({
       v-if="!hideEllipse"
       src="/ellipse.svg"
       class="photos-pair__ellipse"
-      alt="эллипс"
-    />
+      alt="эллипс">
   </div>
 </template>
 
