@@ -1,5 +1,6 @@
-<script setup>
-import SectionTitle from "~/elements/SectionTitle.vue";
+<script setup lang="ts">
+import SectionTitle from "@/elements/SectionTitle.vue";
+
 const photos = [
   {
     id: 1,
@@ -22,12 +23,12 @@ const photos = [
 <template>
   <div id="brand" class="brand-candles">
     <div class="wrapper">
-      <SectionTitle>брендированные свечи</SectionTitle>
+      <SectionTitle>Брендированные свечи</SectionTitle>
       <p>мерч, которого точно нет у ваших конкурентов</p>
 
       <div class="brand-candles__photos">
         <div v-for="p in photos" :key="p.id" class="brand-candles__photo">
-          <img :src="p.img" loading="lazy" :alt="p.alt" />
+          <img :src="p.img" loading="lazy" :alt="p.alt" >
         </div>
       </div>
     </div>

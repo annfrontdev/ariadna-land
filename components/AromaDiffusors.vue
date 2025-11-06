@@ -1,6 +1,5 @@
-<script setup>
-import SectionTitle from "~/elements/SectionTitle.vue";
-import PhotosPair from "./PhotosPair.vue";
+<script setup lang="ts">
+import SectionTitle from "@/elements/SectionTitle.vue";
 
 const photos = [
   {
@@ -21,7 +20,7 @@ const photos = [
     <div class="wrapper">
       <div class="diffusors__content">
         <div>
-          <SectionTitle>аромадиффузоры</SectionTitle>
+          <SectionTitle>Аромадиффузоры</SectionTitle>
           <div>
             <p>
               Аромат - невидимый образ, который создается в каждом помещении.
@@ -30,9 +29,9 @@ const photos = [
             <p>
               Вдохните свежести в рабочее пространство или умиротворения
               в&nbsp;спальню.
-              <br />
+              <br >
               Аромадиффузор стал неотъемлемой частью образа интерьера.
-              <br />
+              <br >
               Не отказывайте себе в удовольствии наслаждаться любимыми ароматами
               не только через духи.
             </p>

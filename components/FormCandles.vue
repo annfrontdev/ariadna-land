@@ -1,6 +1,6 @@
-<script setup>
-import SectionTitle from "~/elements/SectionTitle.vue";
-import PhotosGrid from "./PhotosGrid.vue";
+<script setup lang="ts">
+import SectionTitle from "@/elements/SectionTitle.vue";
+
 const photos = [
   {
     id: 1,
@@ -23,7 +23,7 @@ const photos = [
 <template>
   <div id="form" class="form-candles">
     <div class="wrapper">
-        <SectionTitle>формовые свечи</SectionTitle>
+        <SectionTitle>Формовые свечи</SectionTitle>
         <PhotosGrid :photos="photos">
           <p>
             Малыш Будда, Лотос и Столбик из пузырей - линейка формовых свечей.

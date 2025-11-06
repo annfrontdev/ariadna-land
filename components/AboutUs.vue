@@ -1,7 +1,6 @@
-<script setup>
-import SectionTitle from "~/elements/SectionTitle.vue";
-import PhotosPair from "./PhotosPair.vue";
-import CommonList from "~/elements/CommonList.vue";
+<script setup lang="ts">
+import SectionTitle from "@/elements/SectionTitle.vue";
+import CommonList from "@/elements/CommonList.vue";
 
 const benefits = [
   {
@@ -11,7 +10,7 @@ const benefits = [
   },
   {
     id: 2,
-    text: `Стиль в каждом детале: наши интерьерные свечи и диффузоры – это
+    text: `Стиль в каждом детали: наши интерьерные свечи и диффузоры – это
       стильные аксессуары, которые подчеркнут индивидуальность вашего дома.`,
   },
   {
@@ -22,7 +21,7 @@ const benefits = [
   {
     id: 4,
     text: `Экологичность: мы заботимся о планете и предлагаем вам возможность
-      реюзить наши продукты, чтобы сократить количество отходов.`,
+      переиспользовать наши продукты, чтобы сократить количество отходов.`,
   },
   {
     id: 5,
@@ -49,18 +48,18 @@ const photos = [
   <div id="about" class="about-us">
     <div class="about-us__content wrapper">
       <div>
-        <SectionTitle>о нас</SectionTitle>
+        <SectionTitle>О нас</SectionTitle>
         <div class="about-us__text">
           <p>
-            Мы верим, что детали создают атмосферу, поэтому каждая наше изеделие
-            – это уникальное произведение искусства, <br />
+            Мы верим, что детали создают атмосферу, поэтому каждая наше изделие
+            – это уникальное произведение искусства, <br >
             способное преобразить любой интерьер. Ariadna premium – это:
           </p>
 
           <CommonList :list="benefits" />
         </div>
       </div>
-      <PhotosPair :photos="photos" :hideEllipse="true" />
+      <PhotosPair :photos="photos" :hide-ellipse="true" />
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import SectionTitle from "~/elements/SectionTitle.vue";
+import SectionTitle from "@/elements/SectionTitle.vue";
 
 const addresses = [
   {
@@ -35,7 +35,7 @@ const openMap = () => {
 
   setTimeout(() => {
     overlayRef.value.style.display = "block";
-  }, 1000);
+  }, 5000);
 };
 </script>
 
@@ -43,7 +43,7 @@ const openMap = () => {
   <div class="map-addresses">
     <div class="wrapper map-addresses__wrapper">
       <div>
-        <SectionTitle>магазины-партнеры</SectionTitle>
+        <SectionTitle>Магазины-партнеры</SectionTitle>
         <p class="map-addresses__list-title">Ищите наши свечи по адресам:</p>
         <ul>
           <li v-for="address in addresses" :key="address.id">
@@ -54,13 +54,13 @@ const openMap = () => {
       </div>
 
       <div class="map-addresses__map" @click="openMap">
-        <div class="map-addresses__overlay" ref="overlayRef"></div>
+        <div ref="overlayRef" class="map-addresses__overlay" />
         <iframe
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A5f9ae94a5dba176e4dac51c9cdaecfcca9dd62a555f0ceaf6ae8f4fd2e74c0cb&amp;source=constructor"
           width="100%"
           height="400"
-          frameborder="0"
-        ></iframe>
+          title="Yandex map"
+        />
         <p>Нажмите на карту для взаимодействия</p>
       </div>
     </div>
@@ -93,6 +93,7 @@ const openMap = () => {
     p {
       text-align: center;
       margin-top: 4px;
+      display: none;
     }
   }
 
@@ -103,6 +104,7 @@ const openMap = () => {
     width: 100%;
     height: 100%;
     z-index: 1;
+    display: none;
   }
 
   &__list-title {
@@ -117,6 +119,15 @@ const openMap = () => {
   }
 
   @media (max-width: $tablet) {
+    &__map {
+      p {
+        display: block;
+      }
+    }
+    &__overlay {
+      display: block;
+    }
+    
     &__wrapper {
       grid-template-columns: 1fr;
       gap: 50px;

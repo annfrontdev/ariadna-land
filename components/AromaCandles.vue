@@ -1,7 +1,6 @@
-<script setup>
-import SectionTitle from "~/elements/SectionTitle.vue";
-import PhotosGrid from "./PhotosGrid.vue";
-import CommonList from "~/elements/CommonList.vue";
+<script setup lang="ts">
+import SectionTitle from "@/elements/SectionTitle.vue";
+import CommonList from "@/elements/CommonList.vue";
 
 const photos = [
   {
@@ -31,7 +30,7 @@ const formTypes = [
 <template>
   <div id="candles" class="aroma-candles">
     <div class="wrapper">
-      <SectionTitle>аромасвечи с медитацией</SectionTitle>
+      <SectionTitle>Аромасвечи с медитацией</SectionTitle>
       <PhotosGrid :photos="photos" class="aroma-candles__grid">
         <p>
           Наше основное отличие от других - это бонус, который вы получаете с
@@ -50,7 +49,7 @@ const formTypes = [
           И, разумеется, аромат свечи. Их мы используем в соответствии с сезоном
           или поводом. У нас вы можете заказать аромасвечу с классическим
           ароматом (цитрусовые/еловые), так и с нетипичным (вишневый табак/
-          грушевый глинвейн).
+          грушевый глинтвейн).
         </p>
 
         <p>
@@ -65,7 +64,6 @@ const formTypes = [
 <style lang="scss">
 .aroma-candles {
   @include vertical-margin;
-  // width: 100%;
 
   &__grid {
     p {
