@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import SectionTitle from '@/elements/SectionTitle.vue';
 
-import regularPhotoBrand1 from '@/assets/photos/regular/brand-candles-1.webp';
-import retinaPhotoBrand1 from '@/assets/photos/retina/brand-candles-1.webp';
+import regularPhotoBrand1 from '@/assets/photos/regular/brand-1.webp';
+import retinaPhotoBrand1 from '@/assets/photos/retina/brand-1.webp';
 
-import regularPhotoBrand2 from '@/assets/photos/regular/brand-candles-2.webp';
-import retinaPhotoBrand2 from '@/assets/photos/retina/brand-candles-2.webp';
+import regularPhotoBrand2 from '@/assets/photos/regular/brand-2.webp';
+import retinaPhotoBrand2 from '@/assets/photos/retina/brand-2.webp';
 
-import regularPhotoBrand3 from '@/assets/photos/regular/brand-candles-3.webp';
-import retinaPhotoBrand3 from '@/assets/photos/retina/brand-candles-3.webp';
+import regularPhotoBrand3 from '@/assets/photos/regular/brand-3.webp';
+import retinaPhotoBrand3 from '@/assets/photos/retina/brand-3.webp';
 
 const photos = [
   {
