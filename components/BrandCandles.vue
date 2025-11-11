@@ -69,6 +69,7 @@ const photos = [
 
   &__photo {
     @include photo-bg;
+    aspect-ratio: 1/1.5;
 
     img {
       width: 100%;
@@ -77,11 +78,11 @@ const photos = [
     }
 
     &:first-child {
-      border-top-left-radius: 70px;
+      border-top-left-radius: 80px;
     }
 
     &:last-child {
-      border-bottom-right-radius: 70px;
+      border-bottom-right-radius: 80px;
     }
   }
 
@@ -94,7 +95,18 @@ const photos = [
     &__photos {
       height: auto;
       width: 100%;
-      aspect-ratio: 1 / 1;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &__photo {
+      &:first-child {
+        border-top-left-radius: 60px;
+      }
+
+      &:last-child {
+        border-bottom-right-radius: 60px;
+      }
     }
   }
 }
