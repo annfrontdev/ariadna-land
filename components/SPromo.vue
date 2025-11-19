@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted, onUnmounted, ref } from 'vue';
 import NavigationButton from '@/elements/NavigationButton.vue';
 
 import regularPhotoPromo1 from '@/assets/photos/regular/promo-1.webp';
@@ -47,7 +48,7 @@ onUnmounted(() => {
   <div class="promo">
     <div class="wrapper">
       <div class="promo__grid">
-        <img :src="ellipseIcon" class="promo__ellipse" alt="эллипс" />
+        <img :src="ellipseIcon" class="promo__ellipse" alt="эллипс" >
 
         <div ref="titleWrapperRef" class="promo__title">
           <span ref="titleRef" :style="{ transform: `scale(${stretchFactor})` }">
@@ -56,7 +57,7 @@ onUnmounted(() => {
         </div>
 
         <div v-for="(im, id) in promo_images" :key="id" class="promo__photo">
-          <img :src="im.regular" :alt="im.alt" :srcset="`${im.retina} 2x`" />
+          <img :src="im.regular" :alt="im.alt" :srcset="`${im.retina} 2x`" >
         </div>
 
         <NavigationButton link="contacts" class="promo__button">

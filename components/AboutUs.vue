@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import SectionTitle from '@/elements/SectionTitle.vue';
 import CommonList from '@/elements/CommonList.vue';
+import PhotosPair from './PhotosPair.vue';
 
 import regularPhotoAbout1 from '@/assets/photos/regular/about-1.webp';
 import regularPhotoAbout2 from '@/assets/photos/regular/about-2.webp';
@@ -60,7 +61,7 @@ const benefits = [
           <p>
             Мы верим, что детали создают атмосферу, поэтому каждая наше изделие – это уникальное
             произведение искусства,
-            <br />
+            <br>
             способное преобразить любой интерьер. Ariadna premium – это:
           </p>
 

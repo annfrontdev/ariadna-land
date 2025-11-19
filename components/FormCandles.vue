@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SectionTitle from '@/elements/SectionTitle.vue';
+import PhotosGrid from '@/components/PhotosGrid.vue';
 
 import regularPhotoForm1 from '@/assets/photos/regular/form-candles-1.webp';
 import retinaPhotoForm1 from '@/assets/photos/retina/form-candles-1.webp';

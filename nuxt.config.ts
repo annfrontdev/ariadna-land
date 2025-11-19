@@ -4,6 +4,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/eslint', '@nuxt/icon'],
   ssr: false,
+  imports: {
+    autoImport: false,
+  },
+  components: false,
   app: {
     baseURL: '/ariadna-land/',
     head: {

@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import AriadnaLogo from '@/elements/AriadnaLogo.vue';
+import NavigationList from '@/components/NavigationList.vue';
 
 const links = [
   { id: 1, title: 'Аромасвечи', path: 'candles' },

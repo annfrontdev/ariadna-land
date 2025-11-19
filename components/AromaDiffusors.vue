@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SectionTitle from '@/elements/SectionTitle.vue';
+import PhotosPair from '@/components/PhotosPair.vue';
 
 import regularPhotoDiffusors1 from '@/assets/photos/regular/diffusors-1.webp';
 import retinaPhotoDiffusors1 from '@/assets/photos/retina/diffusors-1.webp';
@@ -36,9 +37,9 @@ const photos = [
             </p>
             <p>
               Вдохните свежести в рабочее пространство или умиротворения в&nbsp;спальню.
-              <br />
+              <br>
               Аромадиффузор стал неотъемлемой частью образа интерьера.
-              <br />
+              <br>
               Не отказывайте себе в удовольствии наслаждаться любимыми ароматами не только через
               духи.
             </p>
