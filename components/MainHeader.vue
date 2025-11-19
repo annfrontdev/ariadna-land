@@ -17,11 +17,15 @@ const headerLinks = {
 
 const isMenuVisible = ref(false);
 
-const toggleMenuVisibility = () => {
-  isMenuVisible.value = !isMenuVisible.value;
+function openMenu() {
+  isMenuVisible.value = true
+  document.body.style.overflow = 'hidden'
+}
 
-  document.body.style.overflow = isMenuVisible.value ? 'hidden' : 'auto';
-};
+function closeMenu() {
+  isMenuVisible.value = false
+  document.body.style.overflow = 'auto'
+}
 </script>
 
 <template>
@@ -30,7 +34,7 @@ const toggleMenuVisibility = () => {
       <nav class="header__nav-mobile" aria-label="Меню">
         <div />
         <AriadnaLogo />
-        <button type="button" class="header__menu-opener" @click="toggleMenuVisibility">
+        <button type="button" class="header__menu-opener" @click="openMenu">
           <Icon name="my-icon:burger" size="60" />
         </button>
       </nav>
@@ -43,8 +47,8 @@ const toggleMenuVisibility = () => {
 
       <Transition name="slide-fade">
         <div v-if="isMenuVisible" class="header__mobile-menu" :class="{ open: isMenuVisible }">
-          <div class="header__overlay" @click="toggleMenuVisibility" />
-          <NavigationList :links="links" @show-section="toggleMenuVisibility" />
+          <div class="header__overlay" @click="closeMenu" />
+          <NavigationList :links="links" @show-section="closeMenu" @close="closeMenu" />
         </div>
       </Transition>
     </div>
@@ -171,24 +175,25 @@ const toggleMenuVisibility = () => {
         padding: 16px;
         background: #fff;
         height: 100%;
-        position: relative;
+        position: absolute;
+        right: 0;
         z-index: 1;
-        max-width: 300px;
+        width: 300px;
       }
     }
   }
 
   // TRANSITION
   .slide-fade-enter-active {
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
 
     ul {
-      transition: all 0.5s ease-in-out 0.5s;
+      transition: all 0.2s ease-in-out;
     }
   }
 
   .slide-fade-leave-active {
-    transition: all 0.5s ease-out;
+    transition: all 0.2s ease-out;
   }
 
   .slide-fade-enter-from,
@@ -196,7 +201,7 @@ const toggleMenuVisibility = () => {
     opacity: 0;
 
     ul {
-      transform: translateX(-100%);
+      transform: translateX(100%);
     }
   }
 }
