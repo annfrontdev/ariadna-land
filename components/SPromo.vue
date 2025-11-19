@@ -6,6 +6,8 @@ import retinaPhotoPromo1 from '@/assets/photos/retina/promo-1.webp';
 import regularPhotoPromo2 from '@/assets/photos/regular/promo-2.webp';
 import retinaPhotoPromo2 from '@/assets/photos/retina/promo-2.webp';
 
+import ellipseIcon from '/ellipse.svg';
+
 const promo_images = [
   {
     regular: regularPhotoPromo1,
@@ -45,6 +47,8 @@ onUnmounted(() => {
   <div class="promo">
     <div class="wrapper">
       <div class="promo__grid">
+        <img :src="ellipseIcon" class="promo__ellipse" alt="эллипс" />
+
         <div ref="titleWrapperRef" class="promo__title">
           <span ref="titleRef" :style="{ transform: `scale(${stretchFactor})` }">
             Ariadna premium
@@ -76,6 +80,17 @@ onUnmounted(() => {
     grid-template-rows: max-content max-content max-content;
     gap: 2%;
     justify-content: center;
+    position: relative;
+  }
+
+  &__ellipse {
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transform-origin: center;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 90%;
   }
 
   &__button {

@@ -78,9 +78,7 @@ const photos = [
   }
 
   &__content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include grid-content;
   }
 
   @media (max-width: $tablet) {

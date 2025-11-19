@@ -92,15 +92,16 @@ const benefits = [
   }
 
   &__content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+    @include  grid-content;
   }
 
   @media (max-width: $tablet) {
     h2 {
       margin-top: 0;
+    }
+
+    &__content {
+      grid-template-columns: 1fr;
     }
   }
 }

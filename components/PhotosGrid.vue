@@ -45,15 +45,15 @@ withDefaults(
 
   &__photos {
     display: grid;
-    grid-template-columns: 38% 28% 28%;
+    grid-template-columns: 457px 312px 312px;
     grid-template-rows: 1fr 1fr;
     width: 100%;
-    column-gap: 2%;
-    row-gap: 2%;
+    gap: 1vw;
   }
 
   &__photo {
     @include photo-bg;
+    max-height: 395px;
 
     img {
       object-fit: cover;
@@ -65,6 +65,7 @@ withDefaults(
       grid-column: 1 / 2;
       grid-row: 1 / -1;
       border-top-left-radius: 160px;
+      max-height: 684px;
     }
 
     &:nth-child(2) {
