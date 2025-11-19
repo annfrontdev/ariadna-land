@@ -46,13 +46,13 @@ const openMap = () => {
       </div>
 
       <div class="map-addresses__map" @click="openMap">
-        <div ref="overlayRef" class="map-addresses__overlay" />
+        <div ref="overlayRef" class="map-addresses__overlay"></div>
         <iframe
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A5f9ae94a5dba176e4dac51c9cdaecfcca9dd62a555f0ceaf6ae8f4fd2e74c0cb&amp;source=constructor"
           width="100%"
           height="400"
           class="map-addresses__iframe"
-          title="Yandex map" />
+          title="Yandex map" ></iframe>
         <p>Нажмите на карту для взаимодействия</p>
       </div>
     </div>

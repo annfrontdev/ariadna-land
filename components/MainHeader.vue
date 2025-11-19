@@ -32,7 +32,7 @@ function closeMenu() {
   <header class="header">
     <div class="wrapper header__wrapper">
       <nav class="header__nav-mobile" aria-label="Меню">
-        <div />
+        <div></div>
         <AriadnaLogo />
         <button type="button" class="header__menu-opener" @click="openMenu">
           <Icon name="my-icon:burger" size="60" />
@@ -47,7 +47,7 @@ function closeMenu() {
 
       <Transition name="slide-fade">
         <div v-if="isMenuVisible" class="header__mobile-menu" :class="{ open: isMenuVisible }">
-          <div class="header__overlay" @click="closeMenu" />
+          <div class="header__overlay" @click="closeMenu"></div>
           <NavigationList :links="links" @show-section="closeMenu" @close="closeMenu" />
         </div>
       </Transition>
