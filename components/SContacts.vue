@@ -37,7 +37,7 @@ const contacts = [
         <ul class="contacts__list">
           <li v-for="link in contacts" :key="link.id">
             <a :href="link.path">
-              <img :src="link.img" :alt="link.alt" loading="lazy" width="120" />
+              <img :src="link.img" :alt="link.alt" loading="lazy" width="120">
             </a>
           </li>
         </ul>
@@ -74,7 +74,7 @@ const contacts = [
     }
 
     li {
-      transition: all 0.3s ease;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     li:hover {

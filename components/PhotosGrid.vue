@@ -15,7 +15,7 @@ withDefaults(
   <div class="photos-grid">
     <div class="photos-grid__photos">
       <div v-for="p in photos" :key="p.id" class="photos-grid__photo">
-        <img :src="p.regular" :alt="p.alt" :srcset="`${p.retina} 2x`" loading="lazy" />
+        <img :src="p.regular" :alt="p.alt" :srcset="`${p.retina} 2x`" loading="lazy" >
       </div>
 
       <div class="photos-grid__description">

@@ -20,12 +20,6 @@ const addresses = [
     address: 'Советская ул., 75, Тамбов',
     link: '',
   },
-  {
-    id: 4,
-    title: '“PROбег” спортивный магазин',
-    address: 'ул. Карла Маркса, 161А, Тамбов',
-    link: '',
-  },
 ];
 
 const overlayRef = ref();
@@ -59,6 +53,7 @@ const openMap = () => {
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A5f9ae94a5dba176e4dac51c9cdaecfcca9dd62a555f0ceaf6ae8f4fd2e74c0cb&amp;source=constructor"
           width="100%"
           height="400"
+          class="map-addresses__iframe"
           title="Yandex map" />
         <p>Нажмите на карту для взаимодействия</p>
       </div>
@@ -94,6 +89,10 @@ const openMap = () => {
       margin-top: 4px;
       display: none;
     }
+  }
+
+  &__iframe {
+    border: 0;
   }
 
   &__overlay {

@@ -40,7 +40,7 @@ const photos = [
 
       <div class="brand-candles__photos">
         <div v-for="p in photos" :key="p.id" class="brand-candles__photo">
-          <img :src="p.regular" :alt="p.alt" :srcset="`${p.retina} 2x`" loading="lazy" />
+          <img :src="p.regular" :alt="p.alt" :srcset="`${p.retina} 2x`" loading="lazy" >
         </div>
       </div>
     </div>
@@ -70,6 +70,8 @@ const photos = [
   &__photo {
     @include photo-bg;
     aspect-ratio: 1/1.5;
+    width: 100%;
+    height: 100%;
 
     img {
       width: 100%;

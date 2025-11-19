@@ -12,7 +12,7 @@ $mobile-tablet: 768px;
 $tablet: 1025px;
 
 @mixin button-nav {
-  transition: all 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     color: rgba($text, 0.5);
   }
