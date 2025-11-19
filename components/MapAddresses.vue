@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
+
 import SectionTitle from '@/elements/SectionTitle.vue';
 
 const addresses = [
@@ -27,10 +28,6 @@ const overlayRef = ref();
 
 const openMap = () => {
   overlayRef.value.style.display = 'none';
-
-  setTimeout(() => {
-    overlayRef.value.style.display = 'block';
-  }, 5000);
 };
 </script>
 
