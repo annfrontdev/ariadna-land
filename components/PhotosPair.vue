@@ -67,6 +67,13 @@ withDefaults(
     z-index: -1;
   }
 
+  @media (max-width: $tablet) {
+    &__content {
+      grid-template-columns: 371fr 171fr;
+      gap: 8px;
+    }
+  }
+
   @media (max-width: $mobile) {
     &__photo {
       border-bottom-left-radius: $s-radius;

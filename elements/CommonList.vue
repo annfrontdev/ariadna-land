@@ -17,7 +17,8 @@ withDefaults(
 <template>
   <ul class="common-list">
     <li v-for="link in list" :key="link.id">
-      <span v-if="link.text">{{ link.text }}</span>
+      <!-- eslint-disable-next-line vue/no-v-html -->
+      <span v-if="link.text" v-html="link.text"></span>
     </li>
   </ul>
 </template>
@@ -47,6 +48,10 @@ withDefaults(
       margin-right: 10px;
       vertical-align: middle;
     }
+  }
+
+  strong {
+    font-weight: 400;
   }
 }
 </style>

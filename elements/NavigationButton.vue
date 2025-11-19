@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { scrollToSection } from '@/utils/scroll';
+
 interface Props {
   link?: string;
 }

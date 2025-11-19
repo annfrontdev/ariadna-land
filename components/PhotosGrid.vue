@@ -91,6 +91,7 @@ withDefaults(
       aspect-ratio: 1 / 1;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
+      gap: 8px;
     }
 
     &__photo {

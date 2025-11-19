@@ -36,7 +36,7 @@ const photos = [
   <div id="brand" class="brand-candles">
     <div class="wrapper">
       <SectionTitle>Брендированные свечи</SectionTitle>
-      <p>мерч, которого точно нет у ваших конкурентов</p>
+      <p>Мерч, которого точно нет у ваших конкурентов</p>
 
       <div class="brand-candles__photos">
         <div v-for="p in photos" :key="p.id" class="brand-candles__photo">
