@@ -66,11 +66,6 @@ $tablet: 1025px;
   padding-right: 127px;
 
   @media (max-width: 1200px) {
-    padding-left: 64px;
-    padding-right: 64px;
-  }
-
-  @media (max-width: $tablet) {
     padding-left: 32px;
     padding-right: 32px;
   }

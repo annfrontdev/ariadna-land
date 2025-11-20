@@ -85,7 +85,7 @@ const { photos = [] } = defineProps<{
       width: 100%;
       aspect-ratio: 1 / 1;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: repeat(2, max-content);
       gap: 8px;
     }
 

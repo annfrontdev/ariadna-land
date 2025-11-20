@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue';
-import NavigationButton from '@/components/NavigationButton.vue';
+import { computed, onMounted, onUnmounted, ref } from 'vue'
+import NavigationButton from '@/components/NavigationButton.vue'
 
-import regularPhotoPromo1 from '@/assets/photos/regular/promo-1.webp';
-import retinaPhotoPromo1 from '@/assets/photos/retina/promo-1.webp';
-import regularPhotoPromo2 from '@/assets/photos/regular/promo-2.webp';
-import retinaPhotoPromo2 from '@/assets/photos/retina/promo-2.webp';
+import regularPhotoPromo1 from '@/assets/photos/regular/promo-1.webp'
+import retinaPhotoPromo1 from '@/assets/photos/retina/promo-1.webp'
+import regularPhotoPromo2 from '@/assets/photos/regular/promo-2.webp'
+import retinaPhotoPromo2 from '@/assets/photos/retina/promo-2.webp'
 
-import ellipseIcon from '/ellipse.svg';
+import ellipseIcon from '/ellipse.svg'
 
 const promo_images = [
   {
@@ -22,26 +22,26 @@ const promo_images = [
     alt: 'промо свеча 2',
     id: 1,
   },
-];
+]
 
-const titleRef = ref();
-const titleWrapperRef = ref();
-const stretchFactor = ref(1);
+const titleRef = ref()
+const titleWrapperRef = ref()
+const stretchFactor = ref(1)
 
 function updateStretch() {
-  const containerWidth = titleWrapperRef.value.offsetWidth;
-  const textWidth = titleRef.value.offsetWidth;
-  stretchFactor.value = containerWidth / textWidth - 0.2;
+  const containerWidth = titleWrapperRef.value.offsetWidth
+  const textWidth = titleRef.value.offsetWidth
+  stretchFactor.value = containerWidth / textWidth - 0.2
 }
 
 onMounted(() => {
-  updateStretch();
-  window.addEventListener('resize', updateStretch);
-});
+  updateStretch()
+  window.addEventListener('resize', updateStretch)
+})
 
 onUnmounted(() => {
-  window.removeEventListener('resize', updateStretch);
-});
+  window.removeEventListener('resize', updateStretch)
+})
 </script>
 
 <template>
@@ -92,6 +92,18 @@ onUnmounted(() => {
     top: 50%;
     left: 50%;
     width: 90%;
+
+    @media (max-width: 1024px) {
+      width: 110%;
+    }
+
+    @media (max-width: 1000px) {
+      width: 120%;
+    }
+
+    @media (max-width: 768px) {
+      width: 140%;
+    }
   }
 
   &__button {
@@ -171,6 +183,7 @@ onUnmounted(() => {
 
   @media (max-width: $tablet) {
     &__grid {
+      grid-template-columns: 1fr 1fr;
       gap: 8px;
     }
 
