@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SectionTitle from '@/elements/SectionTitle.vue';
+import SectionTitle from '@/components/SectionTitle.vue';
 import PhotosPair from '@/components/PhotosPair.vue';
 
 import regularPhotoDiffusors1 from '@/assets/photos/regular/diffusors-1.webp';

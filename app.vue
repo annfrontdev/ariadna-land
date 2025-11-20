@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import MainHeader from '@/components/MainHeader.vue';
-import MainFooter from '@/components/MainFooter.vue';
-import SPromo from '@/components/SPromo.vue';
-import AboutUs from '@/components/AboutUs.vue';
-import AromaCandles from '@/components/AromaCandles.vue';
-import AromaDiffusors from '@/components/AromaDiffusors.vue';
-import FormCandles from '@/components/FormCandles.vue';
-import BrandCandles from '@/components/BrandCandles.vue';
-import MapAddresses from '@/components/MapAddresses.vue';
-import SContacts from '@/components/SContacts.vue';
+import MainHeader from '@/components/layout/MainHeader.vue';
+import MainFooter from '@/components/layout/MainFooter.vue';
+import SPromo from '@/components/sections/SPromo.vue';
+import SAboutUs from '@/components/sections/SAboutUs.vue';
+import SAromaCandles from '@/components/sections/SAromaCandles.vue';
+import SAromaDiffusors from '@/components/sections/SAromaDiffusors.vue';
+import SFormCandles from '@/components/sections/SFormCandles.vue';
+import SBrandCandles from '@/components/sections/SBrandCandles.vue';
+import SMapAddresses from '@/components/sections/SMapAddresses.vue';
+import SContacts from '@/components/sections/SContacts.vue';
 </script>
 
 <template>
@@ -16,12 +16,12 @@ import SContacts from '@/components/SContacts.vue';
     <MainHeader />
     <main>
       <SPromo />
-      <AboutUs />
-      <AromaCandles />
-      <AromaDiffusors />
-      <FormCandles />
-      <BrandCandles />
-      <MapAddresses />
+      <SAboutUs />
+      <SAromaCandles />
+      <SAromaDiffusors />
+      <SFormCandles />
+      <SBrandCandles />
+      <SMapAddresses />
       <SContacts />
     </main>
     <MainFooter />

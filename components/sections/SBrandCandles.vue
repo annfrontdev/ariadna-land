@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SectionTitle from '@/elements/SectionTitle.vue';
+import SectionTitle from '@/components/SectionTitle.vue';
 
 import regularPhotoBrand1 from '@/assets/photos/regular/brand-1.webp';
 import retinaPhotoBrand1 from '@/assets/photos/retina/brand-1.webp';

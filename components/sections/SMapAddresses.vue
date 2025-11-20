@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-import SectionTitle from '@/elements/SectionTitle.vue';
+import SectionTitle from '@/components/SectionTitle.vue';
 
 const addresses = [
   {

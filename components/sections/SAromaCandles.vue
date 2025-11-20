@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import SectionTitle from '@/elements/SectionTitle.vue';
-import CommonList from '@/elements/CommonList.vue';
+import SectionTitle from '@/components/SectionTitle.vue';
+import CommonList from '@/components/CommonList.vue';
 import PhotosGrid from '@/components/PhotosGrid.vue';
 
 import regularPhotoCandles1 from '@/assets/photos/regular/candles-1.webp';

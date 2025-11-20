@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SectionTitle from '@/elements/SectionTitle.vue';
+import SectionTitle from '@/components/SectionTitle.vue';
 
 import telegram from '@/assets/images/telegram.png';
 import whatsapp from '@/assets/images/whatsapp.png';

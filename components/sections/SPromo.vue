@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue';
-import NavigationButton from '@/elements/NavigationButton.vue';
+import NavigationButton from '@/components/NavigationButton.vue';
 
 import regularPhotoPromo1 from '@/assets/photos/regular/promo-1.webp';
 import retinaPhotoPromo1 from '@/assets/photos/retina/promo-1.webp';

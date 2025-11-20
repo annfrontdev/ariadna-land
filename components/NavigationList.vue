@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import NavigationButton from '@/elements/NavigationButton.vue';
-import AriadnaLogo from '~/elements/AriadnaLogo.vue';
+import NavigationButton from '@/components/NavigationButton.vue';
+import AriadnaLogo from '@/components/AriadnaLogo.vue';
 
 type Link = {
   id: number;

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SectionTitle from '@/elements/SectionTitle.vue';
+import SectionTitle from '@/components/SectionTitle.vue';
 import PhotosGrid from '@/components/PhotosGrid.vue';
 
 import regularPhotoForm1 from '@/assets/photos/regular/form-candles-1.webp';
@@ -51,5 +51,20 @@ const photos = [
 <style lang="scss">
 .form-candles {
   @include vertical-margin;
+
+  .photos-grid__photos {
+    grid-template-columns: 444px 332px 332px;
+  }
+  .photos-grid__photo {
+    max-height: 399px;
+  }
+  .photos-grid__photo:first-child {
+    max-height: 663px;
+  }
+  @media (max-width: $tablet) {
+    .photos-grid__photos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
 </style>
