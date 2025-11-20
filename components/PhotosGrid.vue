@@ -1,14 +1,9 @@
 <script lang="ts" setup>
 import type { Photo } from '@/types';
 
-withDefaults(
-  defineProps<{
-    photos?: Photo[];
-  }>(),
-  {
-    photos: () => [],
-  }
-);
+const { photos = [] } = defineProps<{
+  photos?: Photo[];
+}>();
 </script>
 
 <template>

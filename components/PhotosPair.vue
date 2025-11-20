@@ -1,16 +1,10 @@
 <script setup lang="ts">
 import type { Photo } from '@/types';
 
-withDefaults(
-  defineProps<{
+const { photos = [], hideEllipse = false } = defineProps<{
     photos?: Photo[];
     hideEllipse?: boolean;
-  }>(),
-  {
-    photos: () => [],
-    hideEllipse: () => false,
-  }
-);
+  }>();
 </script>
 <template>
   <div v-if="photos?.length" class="photos-pair">

@@ -8,14 +8,9 @@ type Link = {
   path: string;
 };
 
-withDefaults(
-  defineProps<{
-    links?: Link[];
-  }>(),
-  {
-    links: () => [],
-  }
-);
+const { links = [] } = defineProps<{
+  links?: Link[];
+}>();
 
 defineEmits(['show-section', 'close']);
 </script>

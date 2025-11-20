@@ -4,14 +4,9 @@ type Item = {
   text: string;
 };
 
-withDefaults(
-  defineProps<{
-    list?: Item[];
-  }>(),
-  {
-    list: () => [],
-  }
-);
+const { list = [] } = defineProps<{
+  list?: Item[];
+}>();
 </script>
 
 <template>
