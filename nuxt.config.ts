@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   },
   components: false,
   app: {
-    baseURL: '/ariadna-land/',
+    // baseURL: '/ariadna-land/',
     head: {
       charset: 'utf-16',
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1',

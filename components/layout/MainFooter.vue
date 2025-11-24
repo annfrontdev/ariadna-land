@@ -22,7 +22,7 @@ const list = [
           </li>
         </ul>
 
-        <a href="">Бесплатный чек-лист</a>
+        <a href="https://drive.google.com/file/d/1r_XsyPo1Xuuj4peH2uKqwlrmo7PCNG-g/view?fbclid=PARlRTSAORG0NleHRuA2FlbQIxMABzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafLoBX8JzO1Ep8o_p7obG_0OJud_G6BshpeCLHWNu8dBahteJbmAkDMHq6TXA_aem_DpuPCEL6SA1zOsayiGz-Ag" target="_blank">Бесплатный чек-лист</a>
       </div>
       <p class="copyright">Ariadna premium 2025</p>
     </div>
